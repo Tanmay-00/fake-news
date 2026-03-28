@@ -1,0 +1,1090 @@
+================================================================================
+  WEBSITE BLUEPRINT: FAKE NEWS DETECTION APP
+  Reference Site: WorldQuant Foundry (https://www.worldquantfoundry.com/)
+  Document Type: Full site analysis + section-by-section app specification
+  Generated: March 2026
+================================================================================
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PART 1: WQF SITE ANALYSIS (Complete)
+────────────────────────────────────────────────────────────────────────────────
+
+SITE URL:         https://www.worldquantfoundry.com/
+SITE TYPE:        Venture lab / startup studio brochure site
+BUILT BY:         Series Eight (serieseight.com)
+COPYRIGHT:        © 2026 WorldQuant Foundry
+PARENT COMPANY:   WorldQuant LLC
+
+
+── WQF COLOR PALETTE ──────────────────────────────────────────────────────────
+
+  Primary background:   #0D0F1A  (near black, dark navy)
+  Secondary bg:         #111420  (slightly lighter dark)
+  Surface/card:         #1A1D2E  (dark blue-gray cards)
+  Text primary:         #FFFFFF  (white)
+  Text secondary:       rgba(255,255,255,0.55)  (muted white)
+  Text tertiary:        rgba(255,255,255,0.28)  (hint white)
+  Accent / brand red:   #E63946  (vibrant red — used for CTA buttons, highlights)
+  Accent blue:          #1B4FD8  (used sparingly on hover states)
+  Border subtle:        rgba(255,255,255,0.08)
+  Border mid:           rgba(255,255,255,0.15)
+
+  FONT STACK:
+    Display / headings:  Custom serif + uppercase tracked letter-spacing
+    Body:                Clean sans-serif, weight 300–400
+    CTA buttons:         Uppercase, letter-spacing 1.5–2px, weight 500
+
+
+── WQF NAVIGATION ─────────────────────────────────────────────────────────────
+
+  Type:     Sticky top navbar, transparent on scroll, solid on scroll
+  Logo:     "WorldQuant Foundry" — wordmark, white text
+  Links:    WHY WQF | PORTFOLIO | TEAM | INSIGHTS | Contact
+  CTA:      "Contact" — scrolls to contact form (anchor link #contact)
+  Style:    All caps, tracked letter spacing, minimal weight
+
+
+── WQF PAGE STRUCTURE (Homepage) ──────────────────────────────────────────────
+
+  SECTION 1 — HERO
+    Headline:     "Forging Companies That Pull The Future Forward"
+    Subtext:      "WorldQuant Foundry is a venture lab that empowers
+                   breakthrough founders to pull the future forward.
+                   Capital. Connections. Mentorship. Full-stack support."
+    CTA:          "Contact Us" button (x2, repeated)
+    Visual:       Rotating carousel of 3 leadership portrait photos
+    Style:        Full-screen, dark bg, large headline, centered layout
+
+  SECTION 2 — OUR ETHOS (4 Pillars)
+    Header:       "Our ethos — Vision matters. Velocity wins."
+    Sub:          "Our comprehensive founder platform shifts the odds..."
+    CTA:          "Join Us"
+    Pillars:
+      01 Exponential Foresight — "We spot industry trends before they
+         permeate the industry. Transform them into companies that matter."
+      02 Full-stack support — "Brand, marketing, performance, legal, ops,
+         finance, funding, and development."
+      03 Financial stability — "Breakthrough thinking shouldn't compete
+         with rent. That's why we pay salaries from the start."
+      04 Intelligent iteration — "Know what you want to build? Start today.
+         No drawn-out program or slow-moving curriculum."
+    Style:        Icon + number + text, horizontal scroll on mobile
+
+  SECTION 3 — OUR FOCUS (Technology Grid)
+    Header:       "Exponential technologies. Trillion-dollar markets."
+    Subtext:      "AI, biotech, robotics, blockchain, NewSpace — these
+                   aren't incremental improvements. They're generational leaps."
+    Grid items:
+      - Advanced Mobility
+      - Artificial Intelligence
+      - Biotechnology & Genomics
+      - Blockchain & DeFi
+      - Next-Gen Finance
+      - Next-Gen Consumer Tech
+      - Quantum Computing
+      - Robotics
+      - Space
+    Style:        Expandable pill/tag grid, hover reveals description
+
+  SECTION 4 — PORTFOLIO
+    Header:       "Our companies don't just enter markets. They define them."
+    CTA:          "Explore our portfolio" (links to /portfolio)
+    Companies:
+      1. Alpha Deal    — Private asset analysis, reimagined. (alphadeal.ai)
+      2. Edda          — Social-first audio book streaming. (joinedda.com)
+      3. Novyra        — Clinical oncology trial matching. (novyra.ai)
+      4. Stratahub     — AI-readiness for enterprise data. (stratahub.com)
+      5. Remix Labs    — Advanced time series modeling. (remixlabs.ai)
+      6. US Autonomous Systems — Drone accessories for rescue/law enforcement.
+    Style:        Horizontal scrollable cards, logo + short desc + link
+
+  SECTION 5 — LEADERSHIP TEAM
+    Header:       "Our Leadership Team"
+    Subtext:      "We spot trends before they're trends. Transform them
+                   into companies that matter."
+    Leaders:
+      Igor Tulchinsky  — Founder. Chairman/CIO/Head of Research WorldQuant.
+                         $7B+ AUM, 27 offices worldwide.
+      Amir Husain      — Chairman. Founded SparkCognition (unicorn $1.4B),
+                         CEO Boeing's SkyGrid, 30+ AI patents.
+      Steven Lau       — CEO. 150+ startup investments (IonQ, FigureAI,
+                         SpaceX, Rigetti, PsiQuantum).
+    CTA:          "meet the team" (links to /about)
+    Style:        Photo carousel with LinkedIn links + "Full Bio" expand
+
+  SECTION 6 — FOR INVESTORS
+    Header:       "Invest in tomorrow's category creators."
+    Subtext:      "Join our investor circle and gain pre-market access
+                   to ventures creating new markets in AI, Biotech,
+                   blockchain and frontier tech."
+    CTA:          "Connect with us"
+    Points:
+      01 Foresight that converts
+      02 Vetted and supported (4–7 ventures/year)
+      03 Transparent and Accelerated
+
+  SECTION 7 — FOR FOUNDERS
+    Header:       "Build fast, with zero friction and total focus."
+    Subtext:      "Skip the noise and build with a launch-ready team,
+                   deep resources, and immediate market access from day one."
+    CTA:          "Build with us"
+    Points:
+      01 Move at the speed of breakthrough
+      02 Full-stack infrastructure, ready from day one
+      03 Connections that move you forward
+
+  SECTION 8 — FOR PARTNERS
+    Header:       "Partner at the edge of what's possible"
+    Subtext:      "Join forces with the ventures that are creating
+                   new markets. Partner early, transform fast, own the edge."
+    CTA:          "partner with us"
+
+  SECTION 9 — PRE-FOOTER CTA
+    Header:       "Own what's next."
+    Subtext:      "Breakthrough founders. Pre-market investors.
+                   Transformative partners. Reach out, and let's move."
+    CTA:          "Contact Us"
+
+  SECTION 10 — CONTACT FORM (embedded on page)
+    Fields:
+      - I'm a: [Founder | Investor | Partner | Journalist | Other]
+      - First name, Last name, Email, Phone
+      - Business name, Type of business
+      - Message
+      - Privacy consent checkbox
+    Submit:       "Send message"
+
+  SECTION 11 — FOOTER
+    Nav:          WHY WQF | PORTFOLIO | TEAM | INSIGHTS | Contact
+    From WorldQuant section:
+      - Ventures (worldquantventures.com)
+      - University (wqu.edu)
+    Legal links:
+      - Whistleblower Protection Statement
+      - Privacy Policy
+      - Terms and Conditions
+      - Cookie Policy
+    Credit:       "Site by Series Eight"
+    Copyright:    "Copyright © 2026 WorldQuant Foundry"
+
+
+── WQF SUB-PAGES ──────────────────────────────────────────────────────────────
+
+  /why-wqf
+    Sections: Founders · Investors · Partners
+    For founders: "Start fast. Build bold. Iterate intelligently."
+    Infrastructure: Legal, HR, marketing, finance, R&D from day one
+    For investors: Curated (4–7 ventures/year), connected, pattern recognition
+    For partners: Transform before the breakthrough becomes mainstream
+
+  /portfolio
+    6 companies listed with: name, sector, founded year, stage, founder, desc
+    All at MVP stage as of 2025–2026
+    Sectors: Housing, Audio/Entertainment, Healthtech, Infrastructure,
+             Synthetic Data, Drone Accessories
+
+  /about
+    Leadership (3): Igor Tulchinsky, Amir Husain, Steven Lau
+    Advisors (10): Savi Glowe, Dmitry Green, Zaib Husain, John King,
+                   Peter Lee, Dr Christopher Mason, Dr Munira Moosajee,
+                   Christopher Rosado, Dr Nicholas Tatonetti, Kyle Wong
+    Founders (6): Jillian Chen, Gerard Heath, Brandon Krull, Thiam Lee,
+                  Milton Lopez, Mohammed Saadat
+    Ethos quote: "Entrepreneurship demands everything. The stakes are real.
+                  This game is binary: you deliver or you disappear."
+
+  /insights
+    News articles (7 total):
+      - Appoints Dr. Dmitry Green (Mar 2026)
+      - Appoints Dr. Christopher Mason (Jul 2025)
+      - Congratulates Chairman Amir Husain — UT Presidential Citation (Jun 2025)
+      - Launches Alpha Deal (Jun 2025)
+      - Partners with StartX Accelerator (Nov 2024)
+      - WorldQuant Foundry Launches (Nov 2024)
+      - WorldQuant Predictive Appoints Amir Husain (Mar 2024)
+
+  Legal pages:
+    /legal/privacy-policy
+    /legal/terms-and-conditions
+    /legal/cookie-policy
+    /legal/whistleblower-protection-statement
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PART 2: FAKE NEWS DETECTION APP — FULL SECTION BLUEPRINT
+────────────────────────────────────────────────────────────────────────────────
+
+APP NAME:       TruthLens (suggested)
+TAGLINE:        "Truth, verified in seconds."
+DOMAIN:         truthlens.ai (suggested)
+TYPE:           AI-powered fake news detection SaaS + API platform
+AUDIENCE:       Journalists, researchers, developers, publishers, educators
+
+
+── APP COLOR PALETTE ──────────────────────────────────────────────────────────
+
+  INSPIRED BY WQF: dark professional base + bold accent, but with distinct
+  identity suited for a credibility/trust-focused product.
+
+  Primary background:     #0A0A0F   (deep near-black)
+  Secondary background:   #0F1018   (dark surface)
+  Card surface:           #141520   (slightly lighter card bg)
+  Navbar bg:              rgba(10,10,15,0.92) + backdrop-filter blur(10px)
+
+  Text primary:           #FFFFFF
+  Text secondary:         rgba(255,255,255,0.60)
+  Text tertiary:          rgba(255,255,255,0.30)
+
+  ACCENT COLORS (semantic, unlike WQF's single accent):
+    Brand accent:         #2563EB   (trust blue — primary brand color)
+    CTA primary:          #1D4ED8   (deeper blue for buttons)
+    CTA hover:            #1E40AF
+    Verdict TRUE:         #10B981   (green — confirmed true)
+    Verdict FALSE:        #EF4444   (red — confirmed false)
+    Verdict MISLEADING:   #F59E0B   (amber — misleading/partial)
+    Verdict UNVERIFIED:   #6B7280   (gray — not enough data)
+    Bias flag:            #F97316   (orange — emotional language detected)
+
+  SECTION BACKGROUNDS (alternating rhythm like WQF):
+    Hero:                 #0A0A0F   (darkest)
+    Stats bar:            #0F1018
+    How it works:         #141520
+    Feature grid:         #0A0A0F
+    Agents section:       #141520
+    Use cases:            #0F1018
+    Knowledge graph:      #0A0A0F   (with animated nodes)
+    API section:          #141520
+    Contact:              #0A0A0F
+    Footer:               #060608   (darkest footer)
+
+  BORDERS:
+    Default:              rgba(255,255,255,0.08)
+    Hover/focus:          rgba(255,255,255,0.16)
+    Accent:               rgba(37,99,235,0.40)
+
+  FONT STACK:
+    Display/headings:     'Syne', sans-serif  (geometric, modern)
+    Body:                 'DM Sans', sans-serif  (clean, readable)
+    Code blocks:          'JetBrains Mono', monospace
+    Fallbacks:            system-ui, sans-serif
+
+  FONT WEIGHTS:
+    Light body:           300
+    Regular:              400
+    Medium/labels:        500
+    Bold headings:        700
+    Black display:        800
+
+  MOTION:
+    Page load:            Staggered fade-up (0.1s delays per element)
+    Hover cards:          translateY(-3px), border brightens
+    Agent scan animation: Progress bar fill + step-by-step activation
+    Verdict reveal:       Scale + fade in badge
+    Confidence bar:       CSS width transition 0.8s ease-out
+
+
+── S1: STICKY NAVBAR ──────────────────────────────────────────────────────────
+
+  TYPE:         Sticky, transparent → frosted glass on scroll
+  HEIGHT:       60px
+  BACKGROUND:   rgba(10,10,15,0.92) + backdrop-filter: blur(10px)
+  BORDER:       border-bottom: 1px solid rgba(255,255,255,0.06)
+
+  LEFT:
+    Logo:       "Truth" (white) + "Lens" (brand blue #2563EB)
+    Font:       Syne 800, 18px, letter-spacing: -0.5px
+
+  CENTER LINKS (desktop):
+    - How it works   → #how-it-works (anchor)
+    - Features       → #features (anchor)
+    - Agents         → #agents (anchor)
+    - API            → #api (anchor)
+    - Contact        → #contact (anchor)
+    Font: DM Sans 500, 13px, letter-spacing: 0.3px
+    Color: rgba(255,255,255,0.65) → white on hover
+
+  RIGHT:
+    CTA Button: "Try free"
+    Style:      bg #2563EB, color white, px 18 py 8, border-radius 6px
+    Hover:      bg #1D4ED8
+
+  WQF COMPARISON:
+    WQF uses all-caps nav ("WHY WQF", "PORTFOLIO", etc.)
+    Your app uses sentence case functional labels (How it works, Features)
+    WQF has no right-side product CTA — you need one ("Try free")
+    Both use sticky behavior with subtle bg on scroll
+
+
+── S2: HERO (FULL-SCREEN) ─────────────────────────────────────────────────────
+
+  TYPE:         Full-screen split layout (text left, live preview right)
+  MIN-HEIGHT:   100vh
+  BACKGROUND:   #0A0A0F
+
+  LEFT COLUMN:
+    Badge:      "AI-powered fact checking"  (dark blue pill, white text)
+                bg: rgba(37,99,235,0.15), border: 1px solid rgba(37,99,235,0.3)
+                font-size: 11px, letter-spacing: 1.5px, UPPERCASE
+
+    Headline:   "Truth, verified\nin seconds."
+                Font: Syne 800, 52–64px, letter-spacing: -3px
+                "seconds" → color: #2563EB (brand blue)
+                Line height: 1.02
+
+    Subheadline: "Paste any article or URL. Our 5-agent AI system
+                  cross-references thousands of sources, scores
+                  credibility, and delivers a verdict with full
+                  evidence — in real time."
+                Font: DM Sans 300, 16px, color: rgba(255,255,255,0.65)
+                Max-width: 480px, line-height: 1.7, margin-bottom: 32px
+
+    INPUT BAR:
+      Input field:  "Paste a URL or article text..."
+                    bg: rgba(255,255,255,0.05), border: 1px solid rgba(255,255,255,0.12)
+                    border-radius: 8px, padding: 12px 16px, font-size: 14px
+                    flex: 1
+      Button:       "Scan now"
+                    bg: #2563EB, color: #fff, padding: 12px 22px
+                    border-radius: 8px, font-weight: 500
+                    Hover: bg #1D4ED8, scale(0.98) on active
+
+    Helper text:    "No account needed — try it free"
+                    Font: 12px, color: rgba(255,255,255,0.35)
+
+  RIGHT COLUMN (Live Preview Card):
+    Container:  bg: #141520, border-radius: 16px, padding: 28px
+                border: 1px solid rgba(255,255,255,0.08)
+
+    Card 1 — Verdict:
+      Label:    "Verdict" (11px, uppercase, rgba(255,255,255,0.4))
+      Badge:    "Misleading" — bg: #F59E0B, color: #fff, font-weight: 700
+      Confidence bar: bg rgba(255,255,255,0.08), fill #F59E0B, 72% width
+
+    Card 2 — Claim analysis:
+      Label:    "Claim analysis"
+      Items:    ● red  — "Claim 1 — contradicted by 4 sources"
+                ● green — "Claim 2 — verified by Reuters, AP"
+                ● amber — "Claim 3 — unverified, 1 source"
+
+    Card 3 — Bias flags:
+      Label:    "Bias flags detected"
+      Items:    ● amber — "Urgency language — 'Act NOW before...'"
+                ● red   — "Fear framing — 3 emotional triggers"
+
+  WQF COMPARISON:
+    WQF hero: Full-screen, single CTA "Contact Us", rotating portrait photos
+    Your hero: Full-screen, interactive input bar, live result preview
+    Key difference: YOUR hero must demonstrate value immediately — no waiting
+    WQF can rely on brand reputation; you must show the product working
+
+
+── S3: LIVE DEMO SCANNER ──────────────────────────────────────────────────────
+
+  TYPE:         Full interactive section (can be merged into hero or standalone)
+  BACKGROUND:   #0F1018
+
+  SUBSECTIONS:
+
+  3a — INPUT AREA:
+    Toggle tabs:    "Paste text" | "Enter URL"
+    Textarea:       min-height 120px, auto-expand
+    Sample buttons: 3 pre-loaded articles (one true, one false, one misleading)
+                    "Try example: COVID vaccine article →"
+                    "Try example: Election fraud claim →"
+                    "Try example: Climate data story →"
+    Submit:         "Analyse now" button (full width on mobile)
+
+  3b — SCANNING ANIMATION (shows while processing):
+    Agent pipeline visual: 5 horizontal steps, activating left to right
+    Step 1: "Extracting claims..." — spinner → checkmark
+    Step 2: "Searching sources..." — spinner → checkmark
+    Step 3: "Scoring credibility..." — spinner → checkmark
+    Step 4: "Detecting bias..." — spinner → checkmark
+    Step 5: "Building verdict..." — spinner → checkmark
+    Progress bar under all 5: fills across 2–3 seconds
+
+  3c — RESULTS PANEL (appears after scan):
+
+    Top row — Verdict badge:
+      Size:   Large, 32px font, Syne 800
+      Colours:
+        "Likely True"    → bg #10B981, color white
+        "Likely False"   → bg #EF4444, color white
+        "Misleading"     → bg #F59E0B, color white
+        "Unverified"     → bg #6B7280, color white
+
+    Confidence score:
+      Circle gauge or horizontal bar
+      "72% confidence" — number + label
+
+    Explanation card:
+      Human-readable summary: "This article contains 2 false claims
+      about vaccination rates, and uses fear-based language in 3
+      instances. While the main event is real, key statistics are
+      distorted by 40%."
+
+    Claim cards (expandable list):
+      Each claim card shows:
+        - Claim text (quoted from article)
+        - Status badge (True / False / Misleading / Unverified)
+        - Supporting evidence (green cards with source + link)
+        - Contradicting evidence (red cards with source + link)
+        - Source credibility score for each source (0–100%)
+
+    Bias & emotion panel:
+      Heatmap of article text with highlighted phrases
+      Colour coding:
+        Red highlight    = false claim detected
+        Orange highlight = fear/urgency language
+        Yellow highlight = unverified claim
+        Gray highlight   = neutral/factual
+
+    Source graph (mini):
+      Small node graph showing sources and their relationships
+
+  WQF COMPARISON:
+    WQF has NO interactive demo — it is a pure brochure site
+    This section is your single biggest differentiator
+    Every visitor should be able to see results within 30 seconds
+
+
+── S4: HOW IT WORKS ───────────────────────────────────────────────────────────
+
+  TYPE:         5-step horizontal pipeline (step cards)
+  BACKGROUND:   #141520
+  LAYOUT:       5 equal-width cards in a row, connected by arrows
+
+  SECTION HEADER:
+    Tag:      "Process"  (brand blue, uppercase, 11px)
+    Title:    "How the 5-agent system works"  (Syne 800, 38px)
+    Sub:      "Each article passes through a pipeline of specialized
+               AI agents running in parallel — like a team of expert
+               fact-checkers operating simultaneously."
+
+  STEP CARDS:
+
+    Step 01 — Claim extraction agent
+      Icon bg:   #E8E6FD (light purple)
+      Number:    "01" — #2563EB, 11px, letter-spacing 2px
+      Title:     "Claim extraction"
+      Desc:      "Parses article into discrete verifiable claims
+                  using NER and semantic analysis."
+      Arrow:     → connector to next step
+
+    Step 02 — Evidence agent
+      Icon bg:   #D4F5E9 (light teal)
+      Number:    "02"
+      Title:     "Evidence search"
+      Desc:      "Fetches supporting and contradicting sources across
+                  live web, news archives, and fact-check databases."
+      Arrow:     →
+
+    Step 03 — Credibility agent
+      Icon bg:   #DAEEFF (light blue)
+      Number:    "03"
+      Title:     "Source credibility"
+      Desc:      "Scores each source domain by trust history, ownership,
+                  and past reliability record."
+      Arrow:     →
+
+    Step 04 — Bias & emotion agent
+      Icon bg:   #FDE8E5 (light coral)
+      Number:    "04"
+      Title:     "Bias detection"
+      Desc:      "Identifies fear language, clickbait structures,
+                  urgency triggers, and emotional manipulation."
+      Arrow:     →
+
+    Step 05 — Consensus agent
+      Icon bg:   #FFF3DF (light amber)
+      Number:    "05"
+      Title:     "Consensus verdict"
+      Desc:      "Weighs all agent outputs into a calibrated confidence
+                  score and final verdict with explanation."
+
+  PARALLEL EXECUTION NOTE:
+    Small badge below steps 02, 03, 04: "Runs in parallel"
+    Visual connector showing they branch from step 01 and merge to step 05
+
+  WQF COMPARISON:
+    WQF's equivalent: "Our Ethos" 4 pillars (Foresight, Support,
+                       Stability, Iteration)
+    Both use numbered sequential cards with icon + title + description
+    WQF is philosophy-oriented; yours is process-oriented (show the system)
+
+
+── S5: FEATURE CARDS GRID ─────────────────────────────────────────────────────
+
+  TYPE:         3-column grid of feature cards
+  BACKGROUND:   #0A0A0F (dark, contrast from previous section)
+
+  SECTION HEADER:
+    Tag:      "Features"
+    Title:    "Everything you need to fight misinformation"
+
+  CARDS (6 total, 3×2 grid):
+
+    Card 1 — XAI Heatmap
+      Dot:    #7B68EE (purple)
+      Title:  "Explainability heatmap"
+      Desc:   "Highlights suspicious words and phrases directly in the
+               article text, showing exactly why the AI flagged them."
+
+    Card 2 — Source credibility score
+      Dot:    #1D9E75 (teal)
+      Title:  "Source credibility score"
+      Desc:   "Every cited domain gets a trust score based on editorial
+               standards, historical accuracy, and bias history."
+
+    Card 3 — Claim-by-claim analysis
+      Dot:    #378ADD (blue)
+      Title:  "Claim-by-claim analysis"
+      Desc:   "Breaks complex articles into individual claims. Each claim
+               is verified independently with its own evidence cards."
+
+    Card 4 — Bias & emotion detection
+      Dot:    #D85A30 (coral)
+      Title:  "Bias and emotion detection"
+      Desc:   "Detects fear language, urgency cues, clickbait phrases,
+               and emotional manipulation patterns in real time."
+
+    Card 5 — Knowledge graph
+      Dot:    #BA7517 (amber)
+      Title:  "Knowledge graph"
+      Desc:   "Visual 2D/3D graph of source relationships, showing how
+               claims propagate across publications and domains."
+
+    Card 6 — AI fact-check chatbot
+      Dot:    #639922 (green)
+      Title:  "AI fact-check assistant"
+      Desc:   "Ask 'why is claim #3 misleading?' or 'show contradicting
+               sources' — context-aware answers grounded in evidence."
+
+  CARD STYLE:
+    bg: #141520, border: 1px solid rgba(255,255,255,0.08)
+    border-radius: 12px, padding: 24px
+    Hover: border-color rgba(255,255,255,0.16), translateY(-3px)
+
+  WQF COMPARISON:
+    WQF's equivalent: "Our Focus" technology grid (9 sectors as pill tags)
+    Yours: Feature cards with description (more product-specific)
+    WQF tags are expandable hover items; yours are static informational cards
+
+
+── S6: TRUST STATS BAR ────────────────────────────────────────────────────────
+
+  TYPE:         Full-width dark stats band (4 columns)
+  BACKGROUND:   #0F1018
+  BORDER:       1px solid rgba(255,255,255,0.08) top and bottom
+
+  STATS:
+
+    Stat 1:   "4.2M+"
+              "Articles scanned"
+              Animation: count up on scroll enter
+
+    Stat 2:   "94.7%"
+              "Verdict accuracy"
+              Note: Link to methodology page for sourcing
+
+    Stat 3:   "12,000+"
+              "Sources indexed"
+
+    Stat 4:   "18M+"
+              "Claims verified"
+
+  NUMBER STYLE:
+    Font: Syne 800, 42px, color: #FFFFFF, letter-spacing: -1.5px
+    Label: DM Sans 400, 12px, color: rgba(255,255,255,0.45)
+    Dividers: 1px solid rgba(255,255,255,0.06) between columns
+
+  WQF COMPARISON:
+    WQF has NO stats bar — they don't need social proof numbers
+    This section is essential for your app to build credibility
+    Stats replace WQF's Portfolio section (proof of scale)
+
+
+── S7: MEET THE AGENTS ────────────────────────────────────────────────────────
+
+  TYPE:         5-card grid, interactive (click to expand)
+  BACKGROUND:   #141520
+  LAYOUT:       5 equal-width cards in single row (desktop)
+
+  SECTION HEADER:
+    Tag:      "The team behind every scan"
+    Title:    "Meet the 5 agents"
+    Sub:      "Each agent is a specialized AI with a distinct role,
+               tools, and expertise — working together like an expert
+               editorial panel."
+
+  AGENT CARDS:
+
+    Agent 1 — Claim Extraction Agent
+      Avatar:   "CE" — bg #7B68EE (purple), white text
+      Name:     "Claim agent"
+      Role:     "Extraction specialist"
+      Expanded: Tools: spaCy NER, HuggingFace transformers
+                Input: Raw article text or URL content
+                Output: Structured JSON list of claims
+
+    Agent 2 — Evidence Agent
+      Avatar:   "EV" — bg #1D9E75 (teal)
+      Name:     "Evidence agent"
+      Role:     "Multi-source researcher"
+      Expanded: Tools: Tavily Search API, SerpAPI, news archive APIs
+                Input: Individual claim strings
+                Output: Supporting + contradicting source cards
+
+    Agent 3 — Credibility Agent
+      Avatar:   "CR" — bg #378ADD (blue)
+      Name:     "Credibility agent"
+      Role:     "Domain trust scorer"
+      Expanded: Tools: Custom domain reputation database
+                Input: Source URLs from evidence agent
+                Output: Credibility scores 0–100 per domain
+
+    Agent 4 — Bias Agent
+      Avatar:   "BI" — bg #D85A30 (coral)
+      Name:     "Bias agent"
+      Role:     "Language analyst"
+      Expanded: Tools: Emotion lexicon, LIWC-style analysis
+                Input: Full article text
+                Output: Flagged phrases + bias category labels
+
+    Agent 5 — Consensus Agent
+      Avatar:   "CO" — bg #BA7517 (amber)
+      Name:     "Consensus agent"
+      Role:     "Verdict orchestrator"
+      Expanded: Tools: Weighted scoring model + LLM reasoning
+                Input: All outputs from agents 2, 3, 4
+                Output: Final verdict, confidence score, explanation
+
+  CARD STYLE:
+    bg: #1A1D2E, border-radius: 12px, padding: 20px, text-center
+    Avatar: 48×48px, border-radius: 10px, margin: 0 auto 12px
+    Hover: lift + border highlight in agent color
+    Click: expands card to show tools/inputs/outputs detail
+
+  WQF COMPARISON:
+    WQF's equivalent: Leadership Team (3 founders with photo + role + bio)
+    Same concept: humanize the intelligence behind the product
+    WQF: real people cards with LinkedIn + Full Bio
+    Yours: AI agent cards with tools + inputs + outputs
+
+
+── S8: WHO USES THIS ──────────────────────────────────────────────────────────
+
+  TYPE:         3-column audience cards with top accent border
+  BACKGROUND:   #0A0A0F
+
+  SECTION HEADER:
+    Tag:      "Who uses TruthLens"
+    Title:    "Built for truth-seekers at every level"
+
+  AUDIENCE CARDS:
+
+    Card 1 — Journalists & Editors
+      Top border:  #EF4444 (red)
+      Title:       "Journalists & editors"
+      Desc:        "Verify sources before publishing. Flag misleading
+                    quotes. Cross-check breaking news claims in seconds,
+                    not hours."
+      CTA:         "Start for free →"
+
+    Card 2 — Researchers & Academics
+      Top border:  #2563EB (blue)
+      Title:       "Researchers & academics"
+      Desc:        "Analyze misinformation at scale. Export structured
+                    evidence data. Integrate with your research pipeline
+                    via API."
+      CTA:         "Access API →"
+
+    Card 3 — Developers & Platforms
+      Top border:  #10B981 (green)
+      Title:       "Developers & platforms"
+      Desc:        "Embed real-time fact-checking into your content
+                    pipeline, CMS, or social platform with a single
+                    API call."
+      CTA:         "View docs →"
+
+  EXTENDED AUDIENCE (below grid — smaller pills):
+    Educators · Media organizations · Social media teams
+    NGOs & think tanks · Government agencies · Fact-check orgs
+
+  WQF COMPARISON:
+    WQF's equivalent: Founders / Investors / Partners audience sections
+    Both segment audiences with dedicated descriptions + distinct CTAs
+    WQF has 3 full sections for each audience; yours uses cards + pills
+
+
+── S9: LIVE KNOWLEDGE GRAPH ───────────────────────────────────────────────────
+
+  TYPE:         Dark full-width section with animated node visualization
+  BACKGROUND:   #060608 (darkest on page)
+  LAYOUT:       Split — visualization left, text right
+
+  LEFT — GRAPH CANVAS:
+    Library:      D3.js force-directed graph or Sigma.js
+    Nodes:        Source domains (Reuters, AP, BBC, CNN, blogs, etc.)
+    Node size:    Proportional to credibility score
+    Node colour:
+      Large/high credibility:  #10B981 (green)
+      Mid credibility:         #F59E0B (amber)
+      Low credibility:         #EF4444 (red)
+      Claim node (center):     #2563EB (blue)
+    Edges:        Lines connecting sources to claims they reference
+    Edge opacity: Proportional to citation frequency
+    Animation:    Gentle constant simulation, nodes drift slightly
+    Interaction:  Hover node → shows domain name + credibility score
+                  Click node → highlights all edges from that source
+
+  RIGHT — TEXT:
+    Title:  "See how claims spread"
+    Body:   "The knowledge graph maps every source relationship —
+             which publications cite which, how claims propagate
+             across low and high credibility sources, and where
+             misinformation originates."
+    CTA:    "Explore a live graph" → links to full graph page
+
+  WQF COMPARISON:
+    WQF has NO equivalent — uses static imagery only
+    This is your single most visually unique section
+    WQF's "Our Focus" grid is the closest structural parallel
+
+
+── S10: API FOR DEVELOPERS ────────────────────────────────────────────────────
+
+  TYPE:         Split layout — code block left, pricing tiers right
+  BACKGROUND:   #141520
+
+  SECTION HEADER:
+    Tag:      "For developers"
+    Title:    "One API call. Full verdict."
+
+  LEFT — CODE BLOCK:
+    Language:   JSON / HTTP
+    Style:      Dark code block (bg #0A0A0F), monospace font
+    Content:
+      # POST /v1/scan
+      {
+        "url": "https://example.com/article",
+        "mode": "full"
+      }
+
+      # Response
+      {
+        "verdict": "Misleading",
+        "confidence": 72,
+        "claims": [...],
+        "evidence": { ... },
+        "bias_flags": ["urgency_language", "fear_framing"],
+        "explanation": "This article contains..."
+      }
+
+    Secondary tabs: Python SDK | Node.js SDK | cURL
+
+  RIGHT — PRICING TIERS:
+
+    Tier 1 — Free
+      Price:    $0/month
+      Limit:    50 scans/month
+      Features: Basic verdict, confidence score
+      CTA:      "Get started"
+
+    Tier 2 — Pro  ← FEATURED (highlighted border)
+      Price:    $29/month
+      Limit:    5,000 scans/month
+      Features: Full API, claim breakdown, evidence cards,
+                bias detection, source credibility scores
+      CTA:      "Start free trial"
+      Badge:    "Most popular"
+
+    Tier 3 — Enterprise
+      Price:    Custom
+      Limit:    Unlimited
+      Features: Dedicated support, SLA, custom models,
+                white-label options, priority queue
+      CTA:      "Contact sales"
+
+  ADDITIONAL INFO:
+    - API docs link
+    - Rate limits documentation
+    - SDK download (Python, Node.js, Java)
+    - Webhook support note
+    - GDPR/data processing note
+
+  WQF COMPARISON:
+    WQF has no API section (not a product company)
+    WQF's "For Investors" / "For Founders" fills a similar role:
+    audience-specific value prop + distinct CTA
+    Both have 3 options with differentiated CTAs
+
+
+── S11: CONTACT SECTION ───────────────────────────────────────────────────────
+
+  TYPE:         Split layout — info left, form right
+  BACKGROUND:   #0A0A0F
+  ID:           #contact (anchor target from nav)
+
+  SECTION HEADER:
+    Tag:      "Get in touch"
+    Title:    "Let's fight misinformation together"
+
+  LEFT — CONTACT INFO:
+    Heading:    "Reach out for API access, partnerships,
+                 or press inquiries"
+    Body:       "Whether you're a developer wanting API access,
+                 a publisher looking for a content verification
+                 partner, or a researcher building on our data —
+                 we'd love to hear from you."
+    Details:
+      Email:    hello@truthlens.ai
+      Location: Hyderabad, India · Remote-first team
+      Response: Within 24 hours
+
+  RIGHT — CONTACT FORM:
+    Fields:
+      - First name (required)
+      - Last name (required)
+      - Email address (required)
+      - "I am a..." dropdown:
+          Journalist / Editor
+          Researcher / Academic
+          Developer / Engineer
+          Publisher / Platform
+          Student
+          Other
+      - Message textarea (required)
+      - "I'd like API access" checkbox (optional toggle)
+      - Privacy consent checkbox (required)
+    Submit:     "Send message" (full-width button)
+
+  WQF COMPARISON:
+    WQF contact form fields:
+      Role: Founder/Investor/Partner/Journalist/Other
+      First name, Last name, Email, Phone
+      Business name, Type of business, Message, Privacy consent
+    Your form is very similar in structure
+    Key difference: your role dropdown is product-relevant (not business-focused)
+    Add "API access" toggle that WQF doesn't need
+
+
+── S12: FOOTER ────────────────────────────────────────────────────────────────
+
+  TYPE:         Multi-column dark footer
+  BACKGROUND:   #060608
+
+  FOOTER TOP (5-column grid):
+
+    Column 1 — Brand (2fr width):
+      Logo:       "Truth" + "Lens" (blue accent on Lens)
+      Tagline:    "AI-powered fake news detection using multi-agent
+                   verification. Accurate, explainable, real-time."
+      Contact:
+        Email:    hello@truthlens.ai
+        Location: Hyderabad, India · Remote-first
+        Response: Within 24 hours
+
+      Social icons (32×32px rounded squares):
+        GitHub    — links to github.com/truthlens
+        Twitter/X — links to twitter.com/truthlens_ai
+        LinkedIn  — links to linkedin.com/company/truthlens
+        YouTube   — links to youtube.com/@truthlens
+        Discord   — links to discord.gg/truthlens
+
+    Column 2 — Product:
+      Links:
+        - How it works
+        - Live demo  [NEW badge]
+        - Features
+        - Browser extension
+        - Pricing
+        - Changelog
+        - Roadmap
+
+    Column 3 — Developers:
+      Links:
+        - API docs  [v2 badge]
+        - Quick start
+        - Endpoints reference
+        - Rate limits
+        - SDKs & libraries
+        - GitHub (Open source badge)
+        - API status / uptime
+
+    Column 4 — Research:
+      Links:
+        - Methodology paper
+        - Accuracy benchmarks
+        - Benchmark dataset
+        - Agent architecture
+        - Source credibility model
+        - Blog / Insights
+        - Cite TruthLens
+
+    Column 5 — Company:
+      Links:
+        - About us
+        - Team
+        - Press kit
+        - Media coverage
+        - Careers
+        - Partners
+        - Contact
+
+  FOOTER MID — Newsletter:
+    Label:      "Get misinformation research updates in your inbox"
+    Input:      Email field
+    Button:     "Subscribe"
+    Note:       "No spam. Unsubscribe anytime."
+
+  FOOTER BOTTOM (two rows):
+
+    Left:
+      Copyright:  "© 2026 TruthLens AI · Built in Hyderabad, India"
+      Status:     ● green dot + "All systems operational"
+                  (links to status page)
+
+    Right — Legal links:
+      - Privacy policy
+      - Terms of service
+      - Cookie policy
+      - Responsible AI policy
+      - Acceptable use policy
+      - Accessibility statement
+
+  FOOTER STYLE:
+    Background:   #060608
+    Link color:   rgba(255,255,255,0.45) → white on hover
+    Section heads: Syne 700, 11px, letter-spacing 1.2px, uppercase, rgba(255,255,255,0.9)
+    Body links:   DM Sans 400, 13px
+    Divider:      1px solid rgba(255,255,255,0.08)
+
+  UNIQUE ELEMENTS VS WQF FOOTER:
+    WQF footer has:    Nav links, WorldQuant ecosystem links, 4 legal links
+    Your footer has:   5 content columns, social icons, newsletter, status indicator,
+                       6 legal links (adds Responsible AI + Acceptable Use)
+
+  WQF FOOTER LEGAL LINKS (for reference):
+    - Whistleblower Protection Statement
+    - Privacy Policy
+    - Terms and Conditions
+    - Cookie Policy
+
+  YOUR FOOTER LEGAL LINKS:
+    - Privacy policy
+    - Terms of service
+    - Cookie policy
+    - Responsible AI policy  ← ESSENTIAL for any AI tool making truth claims
+    - Acceptable use policy  ← Protects against API abuse
+    - Accessibility statement ← Good practice, required in some regions
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PART 3: SIDE-BY-SIDE SECTION COMPARISON TABLE
+────────────────────────────────────────────────────────────────────────────────
+
+  YOUR APP SECTION              WQF EQUIVALENT
+  ────────────────────────────────────────────────────────────────────────
+  S1  Sticky navbar             Sticky nav (WHY WQF · Portfolio · Team · Insights)
+  S2  Hero + live input         Hero ("Forging Companies...") + Contact CTA
+  S3  Live demo scanner         NO EQUIVALENT — your key differentiator
+  S4  How it works (5 agents)   Our Ethos (4 pillars: Foresight, Support, etc.)
+  S5  Feature cards grid        Our Focus (9 tech sector tiles)
+  S6  Trust stats bar           NO EQUIVALENT (WQF uses brand credibility)
+  S7  Meet the agents           Our Leadership Team (3 founders + bios)
+  S8  Who uses this             Founders / Investors / Partners sections
+  S9  Live knowledge graph      NO EQUIVALENT (WQF uses static imagery)
+  S10 API for developers        For Investors / For Founders (audience CTAs)
+  S11 Contact section           Contact form (very similar structure)
+  S12 Footer                    Footer (4 links vs your 6 + 5 columns)
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PART 4: KEY DESIGN DECISIONS INFORMED BY WQF ANALYSIS
+────────────────────────────────────────────────────────────────────────────────
+
+1. DARK THEME IS NON-NEGOTIABLE
+   WQF uses a deep dark navy (#0D0F1A) throughout. This communicates
+   authority, sophistication, and premium quality. Your app should do the same.
+   Light theme feels less credible for an AI intelligence tool.
+
+2. SINGLE BOLD ACCENT COLOR
+   WQF uses one red accent (#E63946) sparingly for CTAs and brand moments.
+   Yours should use blue (#2563EB) as primary — blue communicates trust,
+   accuracy, and authority (appropriate for fact-checking).
+   Reserve red/amber/green ONLY for verdict colours (False/Misleading/True).
+
+3. LARGE DISPLAY TYPOGRAPHY
+   WQF uses oversized headlines (50–70px) with tight letter-spacing (-2 to -3px).
+   Match this weight. Headlines should feel confident and declarative.
+
+4. MINIMAL NAVIGATION
+   WQF has exactly 5 nav links. Don't add more. Every extra link dilutes CTA.
+   Keep: How it works · Features · Agents · API · Contact + "Try free" button.
+
+5. INTERACTIVE PROOF OVER STATIC CLAIMS
+   WQF can say "we build great companies" and be believed (established brand).
+   You CANNOT — you must DEMONSTRATE. Every claim must be backed by:
+   - Live demo users can try immediately
+   - Stats with specific numbers (not "thousands of articles")
+   - Methodology link for academics + journalists
+
+6. THREE-AUDIENCE STRUCTURE
+   WQF organises its pitch around 3 audiences: Founders, Investors, Partners.
+   Mirror this for: Journalists, Researchers, Developers.
+   Each audience has different needs → different CTAs → different landing pages.
+
+7. FOOTER AS TRUST SIGNAL
+   WQF's footer is minimal (just nav + legal). Yours must be more dense because:
+   - You're a newer product that needs to signal legitimacy
+   - Developers need quick access to API docs and GitHub
+   - Researchers need methodology and citation links
+   - "Responsible AI policy" is essential — you're making truth claims about news
+
+8. CONTACT FORM PLACEMENT
+   WQF embeds the contact form directly on the page (not a separate page).
+   Do the same — it removes friction significantly.
+   Keep the role/use-case dropdown so you can route responses appropriately.
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PART 5: PAGES NEEDED (BEYOND HOMEPAGE)
+────────────────────────────────────────────────────────────────────────────────
+
+  MAIN SITE:
+    /                   Homepage (all 12 sections)
+    /demo               Full interactive demo (expanded S3)
+    /features           Full feature documentation
+    /pricing            Detailed pricing comparison table
+    /blog               Research articles + insights (like WQF /insights)
+    /about              Team page (like WQF /about)
+
+  DEVELOPER HUB:
+    /docs               API documentation hub
+    /docs/quickstart    5-minute integration guide
+    /docs/endpoints     Full endpoint reference
+    /docs/sdks          SDK downloads (Python, Node, Java)
+    /status             Live system status / uptime page
+
+  RESEARCH:
+    /methodology        How the 5 agents work, validation process
+    /accuracy           Benchmark results and testing methodology
+    /dataset            Public dataset for researchers
+    /research           Academic papers and citations
+
+  LEGAL:
+    /legal/privacy-policy
+    /legal/terms-of-service
+    /legal/cookie-policy
+    /legal/responsible-ai
+    /legal/acceptable-use
+    /legal/accessibility
+
+
+────────────────────────────────────────────────────────────────────────────────
+  END OF DOCUMENT
+  Source: worldquantfoundry.com (scraped March 2026)
+  Purpose: TruthLens fake news detection app design blueprint
+================================================================================
