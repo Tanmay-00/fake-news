@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 
 type VerdictType = 'likely_true' | 'likely_false' | 'misleading' | 'unverified'
 
@@ -235,7 +235,7 @@ export default function NewsArticlesPanel({ verdict, inputText }: NewsArticlesPa
       {/* Tab 3: Previously Scanned */}
       {activeTab === 'previous' && (
         <div className="nap-content">
-          <p className="nap-prev-note">Community archive — articles recently scanned by TruthLens users</p>
+          <p className="nap-prev-note">Community archive — articles recently scanned by Superman Vision users</p>
           {previous.map((scan, i) => {
             const badge = verdictBadgeStyle(scan.verdict)
             return (
@@ -262,7 +262,7 @@ export default function NewsArticlesPanel({ verdict, inputText }: NewsArticlesPa
       {activeTab === 'factcheck' && (
         <div className="nap-content">
           <p className="nap-factcheck-note">
-            TruthLens cross-references these organisations in every scan. Verify findings directly at the source.
+            Superman Vision cross-references these organisations in every scan. Verify findings directly at the source.
           </p>
           <div className="nap-factcheck-grid">
             {FACT_CHECK_ORGS.map((org, i) => (

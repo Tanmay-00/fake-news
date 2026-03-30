@@ -1,21 +1,21 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 
 type FormField = { name: string; email: string; subject: string; message: string }
 
 const CONTACT_INFO = [
-  { icon: '✉️', label: 'Email', value: 'hello@truthlensai.com', href: 'mailto:hello@truthlensai.com' },
-  { icon: '🐦', label: 'Twitter / X', value: '@truthlensai', href: 'https://twitter.com/truthlensai' },
+  { icon: '✉️', label: 'Email', value: 'hello@supermanvision.ai', href: 'mailto:hello@supermanvision.ai' },
+  { icon: '🐦', label: 'Twitter / X', value: '@supermanvision', href: 'https://twitter.com/Superman Visionai' },
   { icon: '💻', label: 'GitHub', value: 'github.com/AbhiramDhanvi/fake-news', href: 'https://github.com/AbhiramDhanvi/fake-news' },
-  { icon: '💬', label: 'Discord', value: 'discord.gg/truthlens', href: '#' },
+  { icon: '💬', label: 'Discord', value: 'discord.gg/supermanvision', href: '#' },
   { icon: '🕐', label: 'Response time', value: 'Within 24 hours', href: undefined },
 ]
 
 const FAQ = [
-  { q: 'Is TruthLens AI free to use?', a: 'Yes — the scanner, community discussions, and live sessions are all free. We plan a pro tier for API access and bulk scanning.' },
+  { q: 'Is Superman Vision free to use?', a: 'Yes — the scanner, community discussions, and live sessions are all free. We plan a pro tier for API access and bulk scanning.' },
   { q: 'How accurate is the AI verdict?', a: 'Our 5-agent pipeline achieves 99.2% accuracy on our benchmark dataset. The confidence score reflects uncertainty — always read it alongside the explanation.' },
-  { q: 'Can I use TruthLens on my own articles?', a: "Yes. You can paste any article text or URL. The scanner is designed for public-interest journalism, research, and fact-checking." },
+  { q: 'Can I use Superman Vision on my own articles?', a: "Yes. You can paste any article text or URL. The scanner is designed for public-interest journalism, research, and fact-checking." },
   { q: 'How do I report an incorrect verdict?', a: 'Use the "Report analysis" link on any scan result, or email us with the article URL and your reasoning. Community threads are also a great place to contest findings.' },
   { q: 'Is my data stored or shared?', a: 'Scans are processed locally in your browser. We do not store article text. Community posts are public only if you opt in.' },
 ]

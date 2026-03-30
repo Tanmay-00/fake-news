@@ -1,4 +1,4 @@
-const LogoGrad = ({ id }: { id: string }) => (
+﻿const LogoGrad = ({ id }: { id: string }) => (
   <defs>
     <linearGradient id={id} x1="4" y1="4" x2="28" y2="28">
       <stop stopColor="#6366f1"/>
@@ -19,7 +19,7 @@ export default function Footer() {
                 <path d="M10 16.5L14 20.5L22 12.5" stroke="url(#footerLogoGrad)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 <LogoGrad id="footerLogoGrad" />
               </svg>
-              <span>TruthLens<span className="brand-ai">AI</span></span>
+              <span>Superman<span className="brand-ai">Vision</span></span>
             </a>
             <p className="footer-tagline">Multi-agent AI system fighting misinformation with confidence-calibrated verdicts.</p>
           </div>
@@ -38,7 +38,7 @@ export default function Footer() {
             <a href="#">API Reference</a>
             <a href="#">Blog / Insights</a>
             <a href="#">Changelog</a>
-            <a href="#">Cite TruthLens</a>
+            <a href="#">Cite Superman Vision</a>
           </div>
 
           <div className="footer-links-group">
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2026 TruthLens AI. All rights reserved.</p>
+          <p>&copy; 2026 Superman Vision. All rights reserved.</p>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>

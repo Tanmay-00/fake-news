@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import {
   Discussion,
   DiscussionItem,
@@ -59,7 +59,7 @@ const SAMPLE_THREADS: Thread[] = [
         replies: [
           {
             id: 'r1.1', author: 'Dr. Priya Nair', initials: 'PN', color: '#6366f1', timeAgo: '45m ago',
-            body: 'Exactly. Preprints can be valuable, but presenting them as final research is misleading. TruthLens flagged this correctly.'
+            body: 'Exactly. Preprints can be valuable, but presenting them as final research is misleading. Superman Vision flagged this correctly.'
           }
         ]
       },

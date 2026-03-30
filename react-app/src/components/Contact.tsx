@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 
 const EmailIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -70,7 +70,7 @@ export default function Contact() {
       <div className="container">
         <div className="contact-header">
           <h2>Contact Us</h2>
-          <p>Get in touch with the TruthLens AI team.</p>
+          <p>Get in touch with the Superman Vision team.</p>
         </div>
 
         <div className="contact-grid">
@@ -80,8 +80,8 @@ export default function Contact() {
               <h3>Email</h3>
             </div>
             <div className="contact-box-body">
-              <a href="mailto:team@truthlens.ai" className="contact-value">team@truthlens.ai</a>
-              <CopyButton value="team@truthlens.ai" />
+              <a href="mailto:team@supermanvision.ai" className="contact-value">team@supermanvision.ai</a>
+              <CopyButton value="team@supermanvision.ai" />
             </div>
             <div className="contact-box-footer">
               <p>We respond to all emails within 24 hours.</p>

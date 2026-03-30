@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import TrustStats from '../components/TrustStats'
 import Features from '../components/Features'
 import HowItWorks from '../components/HowItWorks'
@@ -16,7 +16,7 @@ export default function HowItWorksPage() {
         <div className="page-hero-inner">
           <span className="section-label">🧠 Methodology</span>
           <h1 className="page-hero-title">
-            How TruthLens Works
+            How Superman Vision Works
           </h1>
           <p className="page-hero-desc">
             Five specialized AI agents work in concert to analyze news articles —

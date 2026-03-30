@@ -1,4 +1,4 @@
-/**
+﻿/**
  * AnomalousMatterHero — Three.js IcosahedronGeometry with:
  *   - Simplex noise vertex displacement (organic "blob" morph)
  *   - Fresnel glow fragment shader
@@ -199,7 +199,7 @@ export function GenerativeArtScene() {
 export function AnomalousMatterHero({
   title       = 'Signal vs Noise — Anomaly Detected',
   subtitle    = 'AI that cuts through the chaos.',
-  description = 'Every second, misinformation mutates and spreads. TruthLens detects the anomalous matter — separating signal from noise across 3,800+ sources in real time.',
+  description = 'Every second, misinformation mutates and spreads. Superman Vision detects the anomalous matter — separating signal from noise across 3,800+ sources in real time.',
 }: AnomalousMatterHeroProps) {
   return (
     <section

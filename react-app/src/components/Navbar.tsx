@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 
 interface NavbarProps {
@@ -37,7 +37,7 @@ export default function Navbar({ theme: _theme, onThemeToggle }: NavbarProps) {
               </linearGradient>
             </defs>
           </svg>
-          <span>TruthLens<span className="brand-ai">AI</span></span>
+          <span>Superman<span className="brand-ai">Vision</span></span>
         </Link>
 
         <div className={`navbar-links${mobileOpen ? ' open' : ''}`} id="nav-links">

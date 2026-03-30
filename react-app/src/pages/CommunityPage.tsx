@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Discussion,
@@ -41,7 +41,7 @@ const THREADS: Thread[] = [
         body: 'I tracked down the original study — it was a preprint, not peer-reviewed. The article omitted that crucial detail entirely.',
         replies: [
           { id: 'r1-1', author: 'Dr. Priya Nair', initials: 'PN', color: '#6366f1', time: '45m ago',
-            body: 'Exactly. Preprints can be valuable, but presenting them as final research is misleading. TruthLens flagged this correctly.' }
+            body: 'Exactly. Preprints can be valuable, but presenting them as final research is misleading. Superman Vision flagged this correctly.' }
         ]
       },
       { id: 'r2', author: 'meera_v', initials: 'MV', color: '#ec4899', time: '30m ago',

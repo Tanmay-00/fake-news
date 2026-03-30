@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 
 const LEGEND = [
   { color: '#ef4444', label: 'False claim' },
@@ -89,7 +89,7 @@ export default function DisclaimerPanel() {
 
         {/* Legal Micro-copy */}
         <p className="disclaimer-legal">
-          TruthLens AI does not guarantee accuracy. By using this tool you agree to our{' '}
+          Superman Vision does not guarantee accuracy. By using this tool you agree to our{' '}
           <a href="/legal/terms-of-service" className="disclaimer-legal-link">Terms of Service</a>{' '}
           and{' '}
           <a href="/legal/acceptable-use" className="disclaimer-legal-link">Acceptable Use Policy</a>.

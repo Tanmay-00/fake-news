@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+﻿import { useState, useRef, useEffect } from 'react'
 
 interface UIMessage {
   text: string
@@ -11,7 +11,7 @@ interface ChatbotProps {
 }
 
 const INITIAL_SUGGESTIONS = [
-  { label: 'How does TruthLens work?', msg: 'How does TruthLens detect fake news?' },
+  { label: 'How does Superman Vision work?', msg: 'How does Superman Vision detect fake news?' },
   { label: 'What is clickbait?', msg: 'What is clickbait and how is it detected?' },
   { label: 'How to spot fake news?', msg: 'What are the best ways to spot fake news?' },
   { label: 'Why is bias analysis important?', msg: 'Why is bias analysis important in news?' },
@@ -28,17 +28,17 @@ const ARTICLE_SUGGESTIONS = [
 function generateResponse(msg: string, hasArticle: boolean): string {
   const q = msg.toLowerCase()
 
-  if (q.includes('how does truthlens') || q.includes('how does it work') || q.includes('how does this work')) {
-    return 'TruthLens uses a multi-agent AI pipeline: first, a Claim Agent extracts key factual assertions. Then an Evidence Agent cross-references them with known sources. A Credibility Agent scores sources, a Bias Agent detects emotional manipulation language, and finally a Consensus Agent delivers a unified verdict with a confidence score.'
+  if (q.includes('how does Superman Vision') || q.includes('how does it work') || q.includes('how does this work')) {
+    return 'Superman Vision uses a multi-agent AI pipeline: first, a Claim Agent extracts key factual assertions. Then an Evidence Agent cross-references them with known sources. A Credibility Agent scores sources, a Bias Agent detects emotional manipulation language, and finally a Consensus Agent delivers a unified verdict with a confidence score.'
   }
   if (q.includes('clickbait')) {
-    return 'Clickbait uses sensational headlines to bait clicks — phrases like "You won\'t believe...", "SHOCKING:", or "They don\'t want you to know..." TruthLens scans for these patterns and scores them on a 0–100 Clickbait Scale. A score above 50 suggests the content may be designed to provoke rather than inform.'
+    return 'Clickbait uses sensational headlines to bait clicks — phrases like "You won\'t believe...", "SHOCKING:", or "They don\'t want you to know..." Superman Vision scans for these patterns and scores them on a 0–100 Clickbait Scale. A score above 50 suggests the content may be designed to provoke rather than inform.'
   }
   if (q.includes('spot fake news') || q.includes('detect fake')) {
     return 'Key red flags for fake news: 1️⃣ Overly emotional or sensational headlines. 2️⃣ No named author or source. 3️⃣ Extreme political bias. 4️⃣ Claims that seem too good (or bad) to be true. 5️⃣ Missing dates or outdated info presented as new. Always cross-check with trusted outlets like Reuters, AP, or BBC.'
   }
   if (q.includes('bias')) {
-    return 'Bias analysis matters because even factually correct information can mislead through selective framing, emotional language, or omission of key context. TruthLens detects emotional tone, urgency signaling, fear-baiting, and manipulation tactics to give you a fuller picture of how a story is being told — not just what it says.'
+    return 'Bias analysis matters because even factually correct information can mislead through selective framing, emotional language, or omission of key context. Superman Vision detects emotional tone, urgency signaling, fear-baiting, and manipulation tactics to give you a fuller picture of how a story is being told — not just what it says.'
   }
   if (q.includes('misleading') || q.includes('red flags')) {
     if (hasArticle) {
@@ -58,13 +58,13 @@ function generateResponse(msg: string, hasArticle: boolean): string {
   if (q.includes('confidence') || q.includes('score') || q.includes('percent')) {
     return 'The confidence score (0–100%) represents how certain the AI pipeline is in its verdict. Above 80%: high certainty. 60–80%: moderate evidence. Below 60%: limited signals, treat as unverified. It\'s based on the strength and consistency of signals across all five analysis agents.'
   }
-  if (q.includes('what is truthlens') || q.includes('about truthlens')) {
-    return 'TruthLens AI is a multi-agent fake news detection engine. It breaks news content down through 5 specialized AI agents — Claim, Evidence, Credibility, Bias, and Consensus — to deliver an explainable verdict. The goal is to make misinformation detection transparent, not just a black-box label.'
+  if (q.includes('what is Superman Vision') || q.includes('about Superman Vision')) {
+    return 'Superman Vision is a multi-agent fake news detection engine. It breaks news content down through 5 specialized AI agents — Claim, Evidence, Credibility, Bias, and Consensus — to deliver an explainable verdict. The goal is to make misinformation detection transparent, not just a black-box label.'
   }
   if (hasArticle) {
-    return `Great question about the article you scanned! The TruthLens pipeline analyzed it for factual claims, source credibility, emotional language, and bias patterns. The verdict and detailed breakdown are shown in the scanner panel above. Is there a specific aspect — the claims, evidence, or bias signals — you'd like me to explain further?`
+    return `Great question about the article you scanned! The Superman Vision pipeline analyzed it for factual claims, source credibility, emotional language, and bias patterns. The verdict and detailed breakdown are shown in the scanner panel above. Is there a specific aspect — the claims, evidence, or bias signals — you'd like me to explain further?`
   }
-  return `I'm TruthLens AI, your misinformation analysis assistant. Try scanning a news article above and I can help explain the results! You can also ask me about how fake news detection works, what clickbait is, or how to verify claims yourself.`
+  return `I'm Superman Vision, your misinformation analysis assistant. Try scanning a news article above and I can help explain the results! You can also ask me about how fake news detection works, what clickbait is, or how to verify claims yourself.`
 }
 
 export default function Chatbot({ articleText }: ChatbotProps) {
@@ -131,7 +131,7 @@ export default function Chatbot({ articleText }: ChatbotProps) {
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
               </svg>
-              <span>TruthLens AI Assistant</span>
+              <span>Superman Vision Assistant</span>
               {hasScannedArticle && (
                 <span className="chatbot-context-badge">📰 Article loaded</span>
               )}
@@ -149,7 +149,7 @@ export default function Chatbot({ articleText }: ChatbotProps) {
               <p>
                 {hasScannedArticle
                   ? '📰 I have the article context loaded! Ask me anything about the analysis, claims, or evidence.'
-                  : '👋 Hi! I\'m TruthLens AI. Ask me about fake news detection, or scan an article above for specific analysis:'}
+                  : '👋 Hi! I\'m Superman Vision. Ask me about fake news detection, or scan an article above for specific analysis:'}
               </p>
               {messages.length === 0 && (
                 <div className="chat-suggestions">
