@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import HowItWorksPage from './pages/HowItWorksPage'
 import CommunityPage from './pages/CommunityPage'
 import ContactPage from './pages/ContactPage'
+import AuthPage from './pages/AuthPage'
 
 function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
@@ -31,6 +32,7 @@ function App() {
         <Route path="/how-it-works" element={<HowItWorksPage />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/auth" element={<AuthPage />} />
       </Routes>
       <Chatbot articleText={currentArticleText} />
     </>

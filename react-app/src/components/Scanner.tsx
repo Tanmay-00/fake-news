@@ -1,5 +1,8 @@
 import { useState, useRef, useCallback } from 'react'
 import type { RefObject } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../hooks/useAuth'
+import { supabase } from '../lib/supabase'
 import NewsArticlesPanel from './NewsArticlesPanel'
 import DisclaimerPanel from './DisclaimerPanel'
 
@@ -172,6 +175,8 @@ function analyzeLocally(input: string): {
 // ─────────────────────────────────────────────────────────────
 
 export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = false }: ScannerProps) {
+  const navigate = useNavigate()
+  const { user } = useAuth()
   const [activeTab, setActiveTab] = useState<TabType>('text')
   const [textInput, setTextInput] = useState('')
   const [urlInput, setUrlInput] = useState('')
@@ -203,6 +208,13 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
   const sleep = (ms: number) => new Promise(r => setTimeout(r, ms))
 
   const handleAnalyze = async () => {
+    if (!user) {
+      if (window.confirm('You must be logged in to analyze news accurately. Go to login?')) {
+        navigate('/auth?mode=login')
+      }
+      return
+    }
+
     const input = activeTab === 'text' ? textInput.trim() : urlInput.trim()
     if (!input) {
       setBtnText('Please enter content first!')
@@ -230,35 +242,50 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
     }, 100)
 
     try {
-      // Simulate step-by-step pipeline with delays
       activateStep(0)
-      await sleep(900)
-      activateStep(1)
-      await sleep(900)
-      activateStep(2)
-      await sleep(900)
-      activateStep(3)
-      await sleep(900)
-      activateStep(4)
-      await sleep(800)
+      
+      // Call Edge Function
+      const { data, error } = await supabase.functions.invoke('analyze-news', {
+        body: activeTab === 'text' ? { text: input } : { url: input }
+      })
 
-      // Run local analysis
-      const result = analyzeLocally(input)
+      if (error) {
+        let msg = error.message;
+        if (error.context) {
+           try {
+             const ctx = await error.context.json();
+             if (ctx.error) msg = ctx.error;
+           } catch (e) {}
+        }
+        throw new Error(msg || 'Analysis failed. Please try again.')
+      }
+
+      // Fast-forward UI animations since request finished successfully
+      activateStep(1)
+      await sleep(300)
+      activateStep(2)
+      await sleep(300)
+      activateStep(3)
+      await sleep(300)
+      activateStep(4)
+      await sleep(300)
+
+      const result = data
 
       setStepStatuses(STEPS.map(() => 'done'))
       setVerdict(result.verdict)
       setExplanation(result.explanation)
-      setHeatmapData(result.heatmap)
-      setBiasSignals(result.bias)
-      setClaims(result.claims)
-      setEvidence(result.evidence)
-      setConfidenceWidth(result.confidence)
-      setConfidenceScore(result.confidence)
+      setHeatmapData(result.heatmap || [])
+      setBiasSignals(result.bias || null)
+      setClaims(result.claims || [])
+      setEvidence(result.evidence || [])
+      setConfidenceWidth(result.confidence_score)
+      setConfidenceScore(result.confidence_score)
 
       onAnalysisComplete?.(input)
       setShowFinalResults(true)
-    } catch (err) {
-      const msg = err instanceof Error ? err.message : 'Analysis failed. Please try again.'
+    } catch (err: any) {
+      const msg = err instanceof Error ? err.message : err.message || 'Analysis failed. Please try again.'
       setErrorMsg(msg)
       setStepStatuses(prev => prev.map(s => s === 'active' ? 'error' : s))
     } finally {
@@ -316,9 +343,7 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
                 {heatmapData.length > 0 && (
                   <div className="heatmap-panel"><h3>Risk Heatmap</h3><div className="heatmap-tokens">{heatmapData.map((e,i)=>(<span key={i} className="heatmap-token" style={{ background:`rgba(239,68,68,${e.risk_score/100*.7})`,color:e.risk_score>60?'#fff':undefined }} title={e.reason}>{e.phrase}</span>))}</div></div>
                 )}
-                {biasSignals && (
-                  <div className="bias-panel"><h3>⚖Bias Signals</h3><div className="bias-grid"><div className="bias-item"><span className="bias-label">Emotional tone</span><span className="bias-value">{biasSignals.emotional_tone}</span></div><div className="bias-item"><span className="bias-label">Clickbait</span><span className="bias-value">{biasSignals.clickbait_score}/100</span></div><div className="bias-item"><span className="bias-label">Urgency</span><span className="bias-value">{biasSignals.urgency_level}</span></div></div>{biasSignals.manipulation_tactics.length>0&&<div className="bias-tags">{biasSignals.manipulation_tactics.map((t,i)=><span key={i} className="bias-tag bias-tag-tactic">{t}</span>)}</div>}</div>
-                )}
+
                 {claims.length > 0 && (
                   <div className="claims-panel"><h3>Claims Breakdown</h3>{claims.map((c,i)=>(<div key={i} className="claim-item"><div className="claim-header"><span className="claim-number">Claim #{i+1}</span><span className={`claim-verdict claim-verdict-${c.verdict}`}>{c.verdict}</span></div><p className="claim-text">{c.text}</p><p className="claim-reasoning">{c.reasoning}</p></div>))}</div>
                 )}
@@ -483,36 +508,6 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
                     </div>
                   )}
 
-                  {/* Bias Signals */}
-                  {biasSignals && (
-                    <div className="bias-panel" id="bias-panel">
-                      <h3>Bias &amp; Manipulation Signals</h3>
-                      <div className="bias-grid">
-                        <div className="bias-card">
-                          <span className="bias-label">Emotional Tone</span>
-                          <span className="bias-value">{biasSignals.emotional_tone}</span>
-                        </div>
-                        <div className="bias-card">
-                          <span className="bias-label">Clickbait Score</span>
-                          <span className="bias-value">{biasSignals.clickbait_score}/100</span>
-                        </div>
-                        <div className="bias-card">
-                          <span className="bias-label">Urgency Level</span>
-                          <span className={`bias-value urgency-${biasSignals.urgency_level}`}>{biasSignals.urgency_level.toUpperCase()}</span>
-                        </div>
-                      </div>
-                      {(biasSignals.manipulation_tactics.length > 0 || biasSignals.fear_signals.length > 0) && (
-                        <div className="bias-tags">
-                          {biasSignals.manipulation_tactics.map((t, i) => (
-                            <span key={`t-${i}`} className="bias-tag bias-tag-tactic">{t}</span>
-                          ))}
-                          {biasSignals.fear_signals.map((f, i) => (
-                            <span key={`f-${i}`} className="bias-tag bias-tag-fear">{f}</span>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
 
                   {/* Claims */}
                   {claims.length > 0 && (

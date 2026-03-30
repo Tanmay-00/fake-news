@@ -158,7 +158,7 @@ export default function CommunityPage() {
             <div className="comm-stat-div"/>
             <div className="comm-stat"><span className="comm-stat-num">340</span><span className="comm-stat-lab">Articles in queue</span></div>
             <div className="comm-stat-div"/>
-            <div className="comm-stat"><span style={{ color:'#EF4444' }}>●</span>&nbsp;<span className="comm-stat-num">12</span><span className="comm-stat-lab">Live now</span></div>
+            <div className="comm-stat" style={{ display:'flex', alignItems:'center', gap:4 }}><span style={{ color:'#EF4444', lineHeight:1 }}>●</span><span className="comm-stat-num">12</span><span className="comm-stat-lab">Live now</span></div>
           </div>
         </div>
       </div>

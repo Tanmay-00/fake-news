@@ -1,5 +1,6 @@
-﻿import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
+import { useAuth } from '../hooks/useAuth'
 
 interface NavbarProps {
   theme: 'dark' | 'light'
@@ -16,6 +17,7 @@ const NAV_LINKS = [
 export default function Navbar({ theme: _theme, onThemeToggle }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { user, signOut } = useAuth()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10)
@@ -69,9 +71,23 @@ export default function Navbar({ theme: _theme, onThemeToggle }: NavbarProps) {
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
             </svg>
           </button>
-          <Link to="/" className="btn btn-primary btn-sm" id="nav-cta">
-            Analyze Free
-          </Link>
+          {user ? (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginLeft: '12px' }}>
+              <span style={{ fontSize: '0.9rem', color: 'var(--fg-subtle)', fontWeight: 500 }} title={user.email}>{user.email?.split('@')[0]}</span>
+              <button onClick={signOut} className="btn btn-outline btn-sm">
+                Sign Out
+              </button>
+            </div>
+          ) : (
+            <>
+              <Link to="/auth?mode=login" className="btn btn-outline btn-sm" style={{ marginLeft: '12px' }}>
+                Login
+              </Link>
+              <Link to="/auth?mode=signup" className="btn btn-primary btn-sm" id="nav-cta">
+                Sign Up
+              </Link>
+            </>
+          )}
           <button
             className="mobile-menu-btn"
             id="mobile-menu-btn"
