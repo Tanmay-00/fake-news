@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import TrustStats from '../components/TrustStats'
 import Features from '../components/Features'
 import HowItWorks from '../components/HowItWorks'
@@ -14,7 +14,7 @@ export default function HowItWorksPage() {
       {/* Page hero */}
       <div className="page-hero">
         <div className="page-hero-inner">
-          <span className="section-label">🧠 Methodology</span>
+          <span className="section-label">Methodology</span>
           <h1 className="page-hero-title">
             How Superman Vision Works
           </h1>
@@ -35,11 +35,11 @@ export default function HowItWorksPage() {
         <div className="container">
           <div className="pipeline-strip-inner">
             {[
-              { n: '01', name: 'Claim Agent', icon: '🔍', desc: 'Extracts verifiable factual claims' },
-              { n: '02', name: 'Evidence Agent', icon: '📂', desc: 'Fetches corroborating sources' },
-              { n: '03', name: 'Credibility Agent', icon: '⭐', desc: 'Scores source trustworthiness' },
-              { n: '04', name: 'Bias Agent', icon: '⚖️', desc: 'Detects linguistic manipulation' },
-              { n: '05', name: 'Consensus Agent', icon: '🏛️', desc: 'Synthesises final verdict' },
+              { n: '01', name: 'Claim Agent', icon: '', desc: 'Extracts verifiable factual claims' },
+              { n: '02', name: 'Evidence Agent', icon: '', desc: 'Fetches corroborating sources' },
+              { n: '03', name: 'Credibility Agent', icon: '', desc: 'Scores source trustworthiness' },
+              { n: '04', name: 'Bias Agent', icon: '⚖', desc: 'Detects linguistic manipulation' },
+              { n: '05', name: 'Consensus Agent', icon: '', desc: 'Synthesises final verdict' },
             ].map((step, i) => (
               <div key={step.n} className="pipeline-strip-step">
                 <div className="pipeline-strip-num">{step.n}</div>

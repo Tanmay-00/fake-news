@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 
 type VerdictType = 'likely_true' | 'likely_false' | 'misleading' | 'unverified'
 
@@ -41,14 +41,14 @@ interface FactCheckOrg {
 }
 
 const FACT_CHECK_ORGS: FactCheckOrg[] = [
-  { name: 'Snopes', tag: 'General fact-checking', searchBase: 'https://www.snopes.com/search?q=', favicon: '🔎' },
-  { name: 'PolitiFact', tag: 'Political claims', searchBase: 'https://www.politifact.com/search/?q=', favicon: '⚖️' },
-  { name: 'FactCheck.org', tag: 'US politics & science', searchBase: 'https://www.factcheck.org/?s=', favicon: '🔬' },
-  { name: 'Reuters Fact Check', tag: 'Global news', searchBase: 'https://www.reuters.com/fact-check/', favicon: '📰' },
-  { name: 'AP Fact Check', tag: 'Breaking news', searchBase: 'https://apnews.com/hub/ap-fact-check', favicon: '📡' },
-  { name: 'Full Fact (UK)', tag: 'UK / EU claims', searchBase: 'https://fullfact.org/search/?q=', favicon: '🇬🇧' },
-  { name: 'Africa Check', tag: 'African news', searchBase: 'https://africacheck.org/?s=', favicon: '🌍' },
-  { name: 'Boom Live', tag: 'South / Southeast Asia', searchBase: 'https://www.boomlive.in/search?q=', favicon: '🌏' },
+  { name: 'Snopes', tag: 'General fact-checking', searchBase: 'https://www.snopes.com/search?q=', favicon: '' },
+  { name: 'PolitiFact', tag: 'Political claims', searchBase: 'https://www.politifact.com/search/?q=', favicon: '⚖' },
+  { name: 'FactCheck.org', tag: 'US politics & science', searchBase: 'https://www.factcheck.org/?s=', favicon: '' },
+  { name: 'Reuters Fact Check', tag: 'Global news', searchBase: 'https://www.reuters.com/fact-check/', favicon: '' },
+  { name: 'AP Fact Check', tag: 'Breaking news', searchBase: 'https://apnews.com/hub/ap-fact-check', favicon: '' },
+  { name: 'Full Fact (UK)', tag: 'UK / EU claims', searchBase: 'https://fullfact.org/search/?q=', favicon: '' },
+  { name: 'Africa Check', tag: 'African news', searchBase: 'https://africacheck.org/?s=', favicon: '' },
+  { name: 'Boom Live', tag: 'South / Southeast Asia', searchBase: 'https://www.boomlive.in/search?q=', favicon: '' },
 ]
 
 function getSourcesForVerdict(verdict: VerdictType | null | undefined): { supporting: Source[]; contradicting: Source[] } {
@@ -106,10 +106,10 @@ function credibilityColor(score: number) {
 }
 
 function verdictBadgeStyle(v: VerdictType) {
-  if (v === 'likely_true') return { bg: 'rgba(16,185,129,0.15)', color: '#10B981', label: '✅ Likely True' }
-  if (v === 'likely_false') return { bg: 'rgba(239,68,68,0.15)', color: '#EF4444', label: '❌ Likely False' }
-  if (v === 'misleading') return { bg: 'rgba(245,158,11,0.15)', color: '#F59E0B', label: '⚠️ Misleading' }
-  return { bg: 'rgba(136,136,136,0.15)', color: '#888', label: '🔍 Unverified' }
+  if (v === 'likely_true') return { bg: 'rgba(16,185,129,0.15)', color: '#10B981', label: 'Likely True' }
+  if (v === 'likely_false') return { bg: 'rgba(239,68,68,0.15)', color: '#EF4444', label: 'Likely False' }
+  if (v === 'misleading') return { bg: 'rgba(245,158,11,0.15)', color: '#F59E0B', label: 'Misleading' }
+  return { bg: 'rgba(136,136,136,0.15)', color: '#888', label: 'Unverified' }
 }
 
 const TABS: { id: TabId; label: string }[] = [

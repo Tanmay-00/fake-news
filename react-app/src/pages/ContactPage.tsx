@@ -1,15 +1,15 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 
 type FormField = { name: string; email: string; subject: string; message: string }
 
 const CONTACT_INFO = [
-  { icon: '✉️', label: 'Email', value: 'hello@supermanvision.ai', href: 'mailto:hello@supermanvision.ai' },
-  { icon: '🐦', label: 'Twitter / X', value: '@supermanvision', href: 'https://twitter.com/Superman Visionai' },
-  { icon: '💻', label: 'GitHub', value: 'github.com/AbhiramDhanvi/fake-news', href: 'https://github.com/AbhiramDhanvi/fake-news' },
-  { icon: '💬', label: 'Discord', value: 'discord.gg/supermanvision', href: '#' },
-  { icon: '🕐', label: 'Response time', value: 'Within 24 hours', href: undefined },
+  { icon: '', label: 'Email', value: 'hello@supermanvision.ai', href: 'mailto:hello@supermanvision.ai' },
+  { icon: '', label: 'Twitter / X', value: '@supermanvision', href: 'https://twitter.com/Superman Visionai' },
+  { icon: '', label: 'GitHub', value: 'github.com/AbhiramDhanvi/fake-news', href: 'https://github.com/AbhiramDhanvi/fake-news' },
+  { icon: '', label: 'Discord', value: 'discord.gg/supermanvision', href: '#' },
+  { icon: '', label: 'Response time', value: 'Within 24 hours', href: undefined },
 ]
 
 const FAQ = [
@@ -38,7 +38,7 @@ export default function ContactPage() {
       {/* Hero */}
       <div className="page-hero">
         <div className="page-hero-inner">
-          <span className="section-label">📬 Get in touch</span>
+          <span className="section-label">Get in touch</span>
           <h1 className="page-hero-title">Contact Us</h1>
           <p className="page-hero-desc">
             Have a question, found a bug, or want to collaborate? We'd love to hear from you.
@@ -78,28 +78,28 @@ export default function ContactPage() {
               <h3>Quick links</h3>
               <div className="contact-quick-grid">
                 <Link to="/" className="contact-quick-card">
-                  <span>🔍</span>
+                  <span></span>
                   <div>
                     <div className="contact-quick-title">Try the Scanner</div>
                     <div className="contact-quick-desc">Analyze an article now</div>
                   </div>
                 </Link>
                 <Link to="/community" className="contact-quick-card">
-                  <span>👥</span>
+                  <span></span>
                   <div>
                     <div className="contact-quick-title">Community</div>
                     <div className="contact-quick-desc">Join the discussion</div>
                   </div>
                 </Link>
                 <Link to="/how-it-works" className="contact-quick-card">
-                  <span>📖</span>
+                  <span></span>
                   <div>
                     <div className="contact-quick-title">Documentation</div>
                     <div className="contact-quick-desc">How the AI works</div>
                   </div>
                 </Link>
                 <a href="https://github.com/AbhiramDhanvi/fake-news" target="_blank" rel="noopener noreferrer" className="contact-quick-card">
-                  <span>⭐</span>
+                  <span></span>
                   <div>
                     <div className="contact-quick-title">GitHub</div>
                     <div className="contact-quick-desc">Star the repository</div>
@@ -133,7 +133,7 @@ export default function ContactPage() {
             <h2 className="contact-col-heading">Send us a message</h2>
             {sent ? (
               <div className="contact-success">
-                <div style={{ fontSize:48,marginBottom:16 }}>🎉</div>
+                <div style={{ fontSize:48,marginBottom:16 }}></div>
                 <h3>Message sent!</h3>
                 <p>Thanks for reaching out, {form.name}. We'll reply to <strong>{form.email}</strong> within 24 hours.</p>
                 <button className="btn btn-outline" style={{ marginTop:20 }} onClick={() => { setSent(false); setForm({ name:'',email:'',subject:'',message:'' }) }}>

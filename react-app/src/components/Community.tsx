@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import {
   Discussion,
   DiscussionItem,
@@ -114,21 +114,21 @@ const SAMPLE_THREADS: Thread[] = [
 
 const FEATURE_CARDS = [
   {
-    icon: '💬',
+    icon: '',
     title: 'Discussions',
     desc: 'Join fact-checking threads, cite evidence, and help the community reach verified consensus on the articles that matter.',
     stats: '2,400+ active threads',
     color: '#2563EB',
   },
   {
-    icon: '📤',
+    icon: '',
     title: 'Submit an Article',
     desc: 'Flag suspect content for community review. Our AI pipeline runs automatically, then opens it for collective analysis.',
     stats: '340 articles in queue',
     color: '#10B981',
   },
   {
-    icon: '🔴',
+    icon: '',
     title: 'Live Sessions',
     desc: 'Watch a scan happen in real time with other users. React, cite sources, and vote on claims as each agent result reveals.',
     stats: '12 sessions live now',
@@ -182,7 +182,7 @@ export default function Community() {
       <div className="container">
         {/* Section header */}
         <div className="section-header">
-          <span className="section-label">👥 Community</span>
+          <span className="section-label">Community</span>
           <h2 className="section-title">Verify Together</h2>
           <p className="section-desc">
             Join journalists, researchers, and curious readers fighting misinformation —
@@ -287,7 +287,7 @@ export default function Community() {
                 )
               })() : (
                 <div className="community-viewer-empty">
-                  <div style={{ fontSize: 36, marginBottom: 12 }}>💬</div>
+                  <div style={{ fontSize: 36, marginBottom: 12 }}></div>
                   <p style={{ color: 'rgba(255,255,255,0.40)', fontSize: 14, textAlign: 'center' }}>
                     Select a thread from the left to view the discussion
                   </p>

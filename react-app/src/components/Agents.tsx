@@ -36,10 +36,10 @@ const agents = [
 ]
 
 const outputs = [
-  { icon: '⚖️', title: 'Verdict', desc: 'True / False / Misleading' },
-  { icon: '📊', title: 'Confidence Score', desc: '0–100% with calibration' },
-  { icon: '🧾', title: 'Evidence Cards', desc: 'Supporting & contradicting' },
-  { icon: '💡', title: 'Explanation', desc: 'Human-readable summary' },
+  { icon: '⚖', title: 'Verdict', desc: 'True / False / Misleading' },
+  { icon: '', title: 'Confidence Score', desc: '0–100% with calibration' },
+  { icon: '', title: 'Evidence Cards', desc: 'Supporting & contradicting' },
+  { icon: '', title: 'Explanation', desc: 'Human-readable summary' },
 ]
 
 export default function Agents() {
@@ -47,7 +47,7 @@ export default function Agents() {
     <section id="agents" className="agents-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">🤖 Agentic Architecture</span>
+          <span className="section-label">Agentic Architecture</span>
           <h2 className="section-title">Multi-Agent Verification Pipeline</h2>
           <p className="section-desc">Five specialized AI agents collaborate like a team of experts. Each agent brings unique capabilities, and their outputs converge into a consensus verdict.</p>
         </div>

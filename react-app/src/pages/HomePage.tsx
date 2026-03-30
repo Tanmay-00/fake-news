@@ -8,18 +8,18 @@ interface HomePageProps {
 }
 
 const STATS = [
-  { num: '99.2%', label: 'Detection Accuracy', icon: '🎯' },
-  { num: '4.2s',  label: 'Avg. Analysis Time', icon: '⚡' },
-  { num: '50k+',  label: 'Articles Scanned',   icon: '📰' },
-  { num: '5',     label: 'AI Agents Working',   icon: '🤖' },
+  { num: '99.2%', label: 'Detection Accuracy' },
+  { num: '4.2s',  label: 'Avg. Analysis Time'  },
+  { num: '50k+',  label: 'Articles Scanned'    },
+  { num: '5',     label: 'AI Agents Working'   },
 ]
 
 const AGENTS = [
-  { n: '1', name: 'Claim Extraction',    color: '#6366f1', icon: '🔍' },
-  { n: '2', name: 'Evidence Gathering',  color: '#2563EB', icon: '📂' },
-  { n: '3', name: 'Credibility Scoring', color: '#10B981', icon: '⭐' },
-  { n: '4', name: 'Bias Detection',      color: '#F59E0B', icon: '⚖️' },
-  { n: '5', name: 'Consensus Verdict',   color: '#ec4899', icon: '🏛️' },
+  { n: '1', name: 'Claim Extraction',    color: '#6366f1' },
+  { n: '2', name: 'Evidence Gathering',  color: '#2563EB' },
+  { n: '3', name: 'Credibility Scoring', color: '#10B981' },
+  { n: '4', name: 'Bias Detection',      color: '#F59E0B' },
+  { n: '5', name: 'Consensus Verdict',   color: '#ec4899' },
 ]
 
 export default function HomePage({ onArticleAnalyzed }: HomePageProps) {
@@ -30,12 +30,12 @@ export default function HomePage({ onArticleAnalyzed }: HomePageProps) {
 
       {/* ── HERO ──────────────────────────────────────────────── */}
       <section className="home-hero-full">
-        {/* Ambient background blobs */}
         <div className="hero-blob hero-blob-1" />
         <div className="hero-blob hero-blob-2" />
         <div className="hero-blob hero-blob-3" />
 
         <div className="container hero-container">
+
           {/* Badge */}
           <div className="hero-badge">
             <span className="hero-badge-dot" />
@@ -44,16 +44,16 @@ export default function HomePage({ onArticleAnalyzed }: HomePageProps) {
 
           {/* Headline */}
           <h1 className="hero-headline">
-            See Through the<br />
+            See Through the{' '}
             <span className="hero-headline-accent">Noise.</span>{' '}
             <span className="hero-headline-sub-accent">Instantly.</span>
           </h1>
 
           {/* Subtitle */}
           <p className="hero-subline">
-            Superman Vision uses five specialized AI agents to analyze any news article in
-            real time — extracting claims, gathering evidence, scoring credibility, detecting
-            bias, and delivering a confidence-calibrated verdict you can trust.
+            Superman Vision uses five specialized AI agents to analyze any news article
+            in real time — extracting claims, gathering evidence, scoring credibility,
+            detecting bias, and delivering a confidence-calibrated verdict.
           </p>
 
           {/* CTAs */}
@@ -62,41 +62,32 @@ export default function HomePage({ onArticleAnalyzed }: HomePageProps) {
               className="btn btn-primary hero-cta-primary"
               onClick={() => scannerRef.current?.scrollIntoView({ behavior: 'smooth' })}
             >
-              ⚡ Analyze an Article
+              Analyze an Article
             </button>
             <Link to="/how-it-works" className="btn btn-outline hero-cta-outline">
-              How it works →
+              How it works
             </Link>
           </div>
 
-          {/* Stats cards */}
+          {/* Stats */}
           <div className="hero-stats-grid">
             {STATS.map(s => (
               <div key={s.label} className="hero-stat-card">
-                <div className="hero-stat-icon">{s.icon}</div>
                 <div className="hero-stat-num">{s.num}</div>
                 <div className="hero-stat-label">{s.label}</div>
               </div>
             ))}
           </div>
 
-          {/* Agent pipeline */}
-          <div className="hero-pipeline">
+          {/* Agent pipeline — single horizontal line */}
+          <div className="hero-agents-strip">
             {AGENTS.map((a, i) => (
-              <div key={a.n} className="hero-pipeline-step">
-                <div
-                  className="hero-pipeline-icon"
-                  style={{ background: a.color + '18', border: `1.5px solid ${a.color}44` }}
-                >
-                  <span>{a.icon}</span>
-                  <span className="hero-pipeline-num" style={{ color: a.color }}>
-                    {a.n}
-                  </span>
+              <div key={a.n} className="h-a-group">
+                <div className="h-a-pill">
+                  <span className="h-a-num" style={{ background: a.color }}>{a.n}</span>
+                  <span className="h-a-name">{a.name}</span>
                 </div>
-                <span className="hero-pipeline-name">{a.name}</span>
-                {i < AGENTS.length - 1 && (
-                  <div className="hero-pipeline-arrow">→</div>
-                )}
+                {i < AGENTS.length - 1 && <span className="h-a-arrow">&#8594;</span>}
               </div>
             ))}
           </div>
@@ -109,6 +100,7 @@ export default function HomePage({ onArticleAnalyzed }: HomePageProps) {
             <span className="hero-trust-dot" />
             <span>100% free, always</span>
           </div>
+
         </div>
       </section>
 
@@ -116,13 +108,11 @@ export default function HomePage({ onArticleAnalyzed }: HomePageProps) {
       <section className="home-scanner-full" id="scanner" ref={scannerRef}>
         <div className="container">
           <div className="home-scanner-heading">
-            <span className="section-label">🔍 Live Scanner</span>
-            <h2 className="home-scanner-title">
-              Verify Any Article — Right Now
-            </h2>
+            <span className="section-label">Live Scanner</span>
+            <h2 className="home-scanner-title">Verify Any Article — Right Now</h2>
             <p className="home-scanner-desc">
-              Paste article text or a URL below. Our multi-agent pipeline will run in seconds
-              and deliver a full breakdown: verdict, claims, evidence, heatmap, and bias analysis.
+              Paste article text or a URL below. Our multi-agent pipeline runs in seconds
+              and delivers a full breakdown: verdict, claims, evidence, heatmap, and bias analysis.
             </p>
           </div>
 
@@ -136,7 +126,6 @@ export default function HomePage({ onArticleAnalyzed }: HomePageProps) {
         </div>
       </section>
 
-      {/* ── FOOTER ────────────────────────────────────────────── */}
       <Footer />
     </div>
   )

@@ -3,14 +3,14 @@ export default function Comparison() {
     <section id="comparison" className="comparison-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">🧩 Debate View</span>
+          <span className="section-label">Debate View</span>
           <h2 className="section-title">Claim Comparison Panel</h2>
           <p className="section-desc">See supporting vs. contradicting evidence side-by-side — like a structured debate.</p>
         </div>
         <div className="comparison-grid">
           <div className="comparison-column comparison-support">
             <div className="comparison-header">
-              <span className="comparison-icon">✅</span>
+              <span className="comparison-icon"></span>
               <h3>Supporting Evidence</h3>
             </div>
             <div className="comparison-cards">
@@ -38,7 +38,7 @@ export default function Comparison() {
 
           <div className="comparison-column comparison-contra">
             <div className="comparison-header">
-              <span className="comparison-icon">❌</span>
+              <span className="comparison-icon"></span>
               <h3>Contradicting Evidence</h3>
             </div>
             <div className="comparison-cards">

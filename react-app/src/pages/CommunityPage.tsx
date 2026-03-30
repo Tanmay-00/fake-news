@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Discussion,
@@ -146,7 +146,7 @@ export default function CommunityPage() {
       {/* Hero */}
       <div className="page-hero page-hero-community">
         <div className="page-hero-inner">
-          <span className="section-label">👥 Open to all</span>
+          <span className="section-label">Open to all</span>
           <h1 className="page-hero-title">Verify Together</h1>
           <p className="page-hero-desc">
             Join journalists, researchers, and curious readers fighting misinformation —
@@ -167,7 +167,7 @@ export default function CommunityPage() {
       <div className="comm-tab-strip">
         <div className="container">
           <div className="comm-tabs">
-            {([['discussions','💬 Discussions'],['submit','📤 Submit Article'],['live','🔴 Live Sessions']] as const).map(([id,label]) => (
+            {([['discussions','Discussions'],['submit','Submit Article'],['live','Live Sessions']] as const).map(([id,label]) => (
               <button key={id} className={`comm-tab${activeTab===id?' active':''}`} onClick={() => setActiveTab(id)}>
                 {label}
               </button>
@@ -246,7 +246,7 @@ export default function CommunityPage() {
                 )
               })() : (
                 <div style={{ display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:'100%',minHeight:300,gap:8 }}>
-                  <span style={{ fontSize:36 }}>💬</span>
+                  <span style={{ fontSize:36 }}></span>
                   <p style={{ color:'rgba(255,255,255,0.40)',fontSize:14 }}>Select a thread to view the discussion</p>
                 </div>
               )}
@@ -264,7 +264,7 @@ export default function CommunityPage() {
               <p className="comm-col-sub">Our AI pipeline runs automatically, then opens the article for collective analysis by the community.</p>
               {submitted ? (
                 <div className="comm-success-box">
-                  <div style={{ fontSize:32,marginBottom:12 }}>✅</div>
+                  <div style={{ fontSize:32,marginBottom:12 }}></div>
                   <h3>Submitted successfully!</h3>
                   <p>The AI pipeline is now running. Your article will appear in the community queue shortly.</p>
                   <button className="btn btn-outline" style={{ marginTop:16 }} onClick={() => setSubmitted(false)}>Submit another</button>
@@ -310,10 +310,10 @@ export default function CommunityPage() {
                 <div key={i} className={`comm-queue-item${item.priority?' priority':''}`}>
                   <div style={{ display:'flex',gap:6,marginBottom:6 }}>
                     <span className="comm-cat-pill">{item.cat}</span>
-                    {item.priority && <span className="comm-priority-pill">⚡ High priority</span>}
+                    {item.priority && <span className="comm-priority-pill">High priority</span>}
                   </div>
                   <p className="comm-queue-title">{item.title}</p>
-                  <span style={{ fontSize:11,color:'rgba(255,255,255,0.40)' }}>👥 {item.analysts} analysts looking at this</span>
+                  <span style={{ fontSize:11,color:'rgba(255,255,255,0.40)' }}>{item.analysts} analysts looking at this</span>
                 </div>
               ))}
             </div>
@@ -332,12 +332,12 @@ export default function CommunityPage() {
             {LIVE_SESSIONS.map(session => (
               <div key={session.id} className="comm-live-card">
                 <div style={{ display:'flex',gap:8,marginBottom:12 }}>
-                  <span className="comm-live-badge">🔴 LIVE</span>
+                  <span className="comm-live-badge">LIVE</span>
                   <span className="comm-cat-pill">{session.category}</span>
                 </div>
                 <p className="comm-live-title">{session.title}</p>
                 <div className="comm-live-meta">
-                  <span>👥 {session.participants} participants</span>
+                  <span>{session.participants} participants</span>
                   <span>Started {session.started}</span>
                 </div>
                 <div className="comm-live-progress-bar">
@@ -359,10 +359,10 @@ export default function CommunityPage() {
             <h3>How live sessions work</h3>
             <div className="comm-live-steps">
               {[
-                { icon:'🔗', title:'Start or join a session', desc:'Paste an article URL to create a room. Share the invite link with others.' },
-                { icon:'👁️', title:'Watch the scan in real time', desc:"All 5 agents run live — evidence cards, heatmap, and verdict appear as they're generated." },
-                { icon:'💬', title:'React and discuss', desc:'Chat with other participants, cite sources using /cite, and react to each finding.' },
-                { icon:'🏛️', title:'Cast your vote', desc:"After the verdict reveals, vote per-claim: Agree, Disagree, or Unsure. Results are saved to the community archive." },
+                { icon:'', title:'Start or join a session', desc:'Paste an article URL to create a room. Share the invite link with others.' },
+                { icon:'', title:'Watch the scan in real time', desc:"All 5 agents run live — evidence cards, heatmap, and verdict appear as they're generated." },
+                { icon:'', title:'React and discuss', desc:'Chat with other participants, cite sources using /cite, and react to each finding.' },
+                { icon:'', title:'Cast your vote', desc:"After the verdict reveals, vote per-claim: Agree, Disagree, or Unsure. Results are saved to the community archive." },
               ].map((step, i) => (
                 <div key={i} className="comm-live-step">
                   <div className="comm-live-step-icon">{step.icon}</div>

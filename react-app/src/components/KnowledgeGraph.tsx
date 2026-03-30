@@ -87,7 +87,7 @@ export default function KnowledgeGraph() {
     <section id="knowledge-graph" className="knowledge-graph-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">🌐 Knowledge Graph</span>
+          <span className="section-label">Knowledge Graph</span>
           <h2 className="section-title">Source Relationship Visualization</h2>
           <p className="section-desc">Interactive 2D graph showing sources, relationships, and credibility scores with color-coded nodes.</p>
         </div>

@@ -3574,3 +3574,89 @@ img {
   letter-spacing: .02em;
 }
 
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   HERO AGENT PIPELINE â€” SINGLE HORIZONTAL LINE
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+/* Outer strip â€” NEVER wraps, scrolls on small screens */
+.hero-agents-strip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  max-width: 920px;
+  width: 100%;
+  margin-bottom: 36px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hero-agents-strip::-webkit-scrollbar { display: none; }
+
+/* Wrapper that holds pill + arrow together */
+.h-a-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Pill chip */
+.h-a-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px 7px 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: border-color .2s, transform .2s;
+  cursor: default;
+}
+.h-a-pill:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+/* Numbered badge */
+.h-a-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Step name */
+.h-a-name {
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--fg);
+  letter-spacing: .01em;
+}
+
+/* Arrow between steps */
+.h-a-arrow {
+  color: var(--fg-subtle);
+  font-size: 1rem;
+  padding: 0 10px;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* Light theme overrides */
+[data-theme="light"] .h-a-pill {
+  background: #fff;
+  border-color: #e2e8f0;
+}
+[data-theme="light"] .h-a-pill:hover {
+  border-color: #94a3b8;
+}
+

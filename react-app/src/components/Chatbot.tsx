@@ -1,4 +1,4 @@
-﻿import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 interface UIMessage {
   text: string
@@ -35,7 +35,7 @@ function generateResponse(msg: string, hasArticle: boolean): string {
     return 'Clickbait uses sensational headlines to bait clicks — phrases like "You won\'t believe...", "SHOCKING:", or "They don\'t want you to know..." Superman Vision scans for these patterns and scores them on a 0–100 Clickbait Scale. A score above 50 suggests the content may be designed to provoke rather than inform.'
   }
   if (q.includes('spot fake news') || q.includes('detect fake')) {
-    return 'Key red flags for fake news: 1️⃣ Overly emotional or sensational headlines. 2️⃣ No named author or source. 3️⃣ Extreme political bias. 4️⃣ Claims that seem too good (or bad) to be true. 5️⃣ Missing dates or outdated info presented as new. Always cross-check with trusted outlets like Reuters, AP, or BBC.'
+    return 'Key red flags for fake news: 1Overly emotional or sensational headlines. 2No named author or source. 3Extreme political bias. 4Claims that seem too good (or bad) to be true. 5Missing dates or outdated info presented as new. Always cross-check with trusted outlets like Reuters, AP, or BBC.'
   }
   if (q.includes('bias')) {
     return 'Bias analysis matters because even factually correct information can mislead through selective framing, emotional language, or omission of key context. Superman Vision detects emotional tone, urgency signaling, fear-baiting, and manipulation tactics to give you a fuller picture of how a story is being told — not just what it says.'
@@ -47,7 +47,7 @@ function generateResponse(msg: string, hasArticle: boolean): string {
     return 'Common misleading patterns include: fear-inducing language, vague attribution ("insiders say"), extreme urgency, and emotional manipulation. Scan an article above to get a specific analysis!'
   }
   if (q.includes('verify') || q.includes('check')) {
-    return 'To independently verify a news claim: 1️⃣ Search the claim on Google News to find corroborating reports. 2️⃣ Check Reuters Fact Check (reuters.com/fact-check), Snopes (snopes.com), or AP Fact Check. 3️⃣ Look for the original primary source (government reports, scientific papers, official statements). 4️⃣ Check the publication\'s about page and track record.'
+    return 'To independently verify a news claim: 1Search the claim on Google News to find corroborating reports. 2Check Reuters Fact Check (reuters.com/fact-check), Snopes (snopes.com), or AP Fact Check. 3Look for the original primary source (government reports, scientific papers, official statements). 4Check the publication\'s about page and track record.'
   }
   if (q.includes('manipulation') || q.includes('tactic')) {
     if (hasArticle) {
@@ -133,7 +133,7 @@ export default function Chatbot({ articleText }: ChatbotProps) {
               </svg>
               <span>Superman Vision Assistant</span>
               {hasScannedArticle && (
-                <span className="chatbot-context-badge">📰 Article loaded</span>
+                <span className="chatbot-context-badge">Article loaded</span>
               )}
             </div>
             <button
@@ -148,8 +148,8 @@ export default function Chatbot({ articleText }: ChatbotProps) {
             <div className="chat-message bot-message">
               <p>
                 {hasScannedArticle
-                  ? '📰 I have the article context loaded! Ask me anything about the analysis, claims, or evidence.'
-                  : '👋 Hi! I\'m Superman Vision. Ask me about fake news detection, or scan an article above for specific analysis:'}
+                  ? 'I have the article context loaded! Ask me anything about the analysis, claims, or evidence.'
+                  : 'Hi! I\'m Superman Vision. Ask me about fake news detection, or scan an article above for specific analysis:'}
               </p>
               {messages.length === 0 && (
                 <div className="chat-suggestions">

@@ -23,10 +23,10 @@ const VERDICT_CSS: Record<VerdictType, string> = {
 }
 
 const VERDICT_LABELS: Record<VerdictType, string> = {
-  likely_true: '✅ Likely True',
-  likely_false: '❌ Likely False',
-  misleading: '⚠️ Misleading',
-  unverified: '🔍 Unverified',
+  likely_true: 'Likely True',
+  likely_false: 'Likely False',
+  misleading: 'Misleading',
+  unverified: 'Unverified',
 }
 
 interface HeatmapEntry {
@@ -273,8 +273,8 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
       <div className="scanner-embed">
         <div className="scanner-input-area">
           <div className="scanner-tabs">
-            <button className={`scanner-tab${activeTab==='text'?' active':''}`} onClick={() => setActiveTab('text')}>📝 Text</button>
-            <button className={`scanner-tab${activeTab==='url'?' active':''}`} onClick={() => setActiveTab('url')}>🔗 URL</button>
+            <button className={`scanner-tab${activeTab==='text'?' active':''}`} onClick={() => setActiveTab('text')}>Text</button>
+            <button className={`scanner-tab${activeTab==='url'?' active':''}`} onClick={() => setActiveTab('url')}>URL</button>
           </div>
           {activeTab === 'text' ? (
             <div className="scanner-input-group">
@@ -289,7 +289,7 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
           )}
           <div className="scanner-actions">
             <button className="btn btn-primary scanner-btn" id="scanner-analyze-btn" onClick={handleAnalyze} disabled={isLoading}>
-              {btnText ?? (isLoading ? '⚡ Analysing…' : '⚡ Analyze Article')}
+              {btnText ?? (isLoading ? 'Analysing…' : 'Analyze Article')}
             </button>
           </div>
         </div>
@@ -314,20 +314,20 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
                   <div className="confidence-bar"><div className="confidence-fill" id="confidence-fill" style={{ width:`${confidenceWidth}%` }}/></div>
                 </div>
                 {heatmapData.length > 0 && (
-                  <div className="heatmap-panel"><h3>🌡️ Risk Heatmap</h3><div className="heatmap-tokens">{heatmapData.map((e,i)=>(<span key={i} className="heatmap-token" style={{ background:`rgba(239,68,68,${e.risk_score/100*.7})`,color:e.risk_score>60?'#fff':undefined }} title={e.reason}>{e.phrase}</span>))}</div></div>
+                  <div className="heatmap-panel"><h3>Risk Heatmap</h3><div className="heatmap-tokens">{heatmapData.map((e,i)=>(<span key={i} className="heatmap-token" style={{ background:`rgba(239,68,68,${e.risk_score/100*.7})`,color:e.risk_score>60?'#fff':undefined }} title={e.reason}>{e.phrase}</span>))}</div></div>
                 )}
                 {biasSignals && (
-                  <div className="bias-panel"><h3>⚖️ Bias Signals</h3><div className="bias-grid"><div className="bias-item"><span className="bias-label">Emotional tone</span><span className="bias-value">{biasSignals.emotional_tone}</span></div><div className="bias-item"><span className="bias-label">Clickbait</span><span className="bias-value">{biasSignals.clickbait_score}/100</span></div><div className="bias-item"><span className="bias-label">Urgency</span><span className="bias-value">{biasSignals.urgency_level}</span></div></div>{biasSignals.manipulation_tactics.length>0&&<div className="bias-tags">{biasSignals.manipulation_tactics.map((t,i)=><span key={i} className="bias-tag bias-tag-tactic">{t}</span>)}</div>}</div>
+                  <div className="bias-panel"><h3>⚖Bias Signals</h3><div className="bias-grid"><div className="bias-item"><span className="bias-label">Emotional tone</span><span className="bias-value">{biasSignals.emotional_tone}</span></div><div className="bias-item"><span className="bias-label">Clickbait</span><span className="bias-value">{biasSignals.clickbait_score}/100</span></div><div className="bias-item"><span className="bias-label">Urgency</span><span className="bias-value">{biasSignals.urgency_level}</span></div></div>{biasSignals.manipulation_tactics.length>0&&<div className="bias-tags">{biasSignals.manipulation_tactics.map((t,i)=><span key={i} className="bias-tag bias-tag-tactic">{t}</span>)}</div>}</div>
                 )}
                 {claims.length > 0 && (
-                  <div className="claims-panel"><h3>🔎 Claims Breakdown</h3>{claims.map((c,i)=>(<div key={i} className="claim-item"><div className="claim-header"><span className="claim-number">Claim #{i+1}</span><span className={`claim-verdict claim-verdict-${c.verdict}`}>{c.verdict}</span></div><p className="claim-text">{c.text}</p><p className="claim-reasoning">{c.reasoning}</p></div>))}</div>
+                  <div className="claims-panel"><h3>Claims Breakdown</h3>{claims.map((c,i)=>(<div key={i} className="claim-item"><div className="claim-header"><span className="claim-number">Claim #{i+1}</span><span className={`claim-verdict claim-verdict-${c.verdict}`}>{c.verdict}</span></div><p className="claim-text">{c.text}</p><p className="claim-reasoning">{c.reasoning}</p></div>))}</div>
                 )}
                 {evidence.length > 0 && (
-                  <div className="evidence-panel"><h3>📂 Evidence Sources</h3>{evidence.map((ev,i)=>(<div key={i} className={`evidence-card evidence-${ev.stance}`}><div className="ev-header"><span className={`ev-stance ev-stance-${ev.stance}`}>{ev.stance}</span><a href={ev.url} target="_blank" rel="noopener noreferrer" className="ev-link">{ev.title}</a></div><div className="ev-credibility">Credibility: {ev.credibility}/100</div><p className="ev-summary">{ev.summary}</p></div>))}</div>
+                  <div className="evidence-panel"><h3>Evidence Sources</h3>{evidence.map((ev,i)=>(<div key={i} className={`evidence-card evidence-${ev.stance}`}><div className="ev-header"><span className={`ev-stance ev-stance-${ev.stance}`}>{ev.stance}</span><a href={ev.url} target="_blank" rel="noopener noreferrer" className="ev-link">{ev.title}</a></div><div className="ev-credibility">Credibility: {ev.credibility}/100</div><p className="ev-summary">{ev.summary}</p></div>))}</div>
                 )}
                 <DisclaimerPanel />
                 <NewsArticlesPanel verdict={verdict} inputText={activeTab==='text'?textInput:urlInput} />
-                <div className="explanation-panel"><h3>💡 AI Explanation</h3><p>{explanation}</p></div>
+                <div className="explanation-panel"><h3>AI Explanation</h3><p>{explanation}</p></div>
               </>
             )}
           </div>
@@ -340,7 +340,7 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
     <section id="scanner" className="scanner-section" ref={scannerRef}>
       <div className="container">
         <div className="section-header">
-          <span className="section-label">🔍 Real-Time Scanner</span>
+          <span className="section-label">Real-Time Scanner</span>
           <h2 className="section-title">Verify Any News Article</h2>
           <p className="section-desc">Paste a URL or article text below. Our multi-agent AI system will analyze it in real-time.</p>
         </div>
@@ -350,11 +350,11 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
               <button
                 className={`scanner-tab${activeTab === 'text' ? ' active' : ''}`}
                 onClick={() => setActiveTab('text')}
-              >📝 Text Input</button>
+              >Text Input</button>
               <button
                 className={`scanner-tab${activeTab === 'url' ? ' active' : ''}`}
                 onClick={() => setActiveTab('url')}
-              >🔗 URL Scanner</button>
+              >URL Scanner</button>
             </div>
 
             {activeTab === 'text' ? (
@@ -433,7 +433,7 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
               {/* Error */}
               {errorMsg && (
                 <div className="scanner-error" id="scanner-error">
-                  <span>⚠️ {errorMsg}</span>
+                  <span>{errorMsg}</span>
                 </div>
               )}
 
@@ -460,7 +460,7 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
                   {/* Heatmap */}
                   {heatmapData.length > 0 && (
                     <div className="heatmap-panel" id="heatmap-panel">
-                      <h3>🔥 Text Heatmap — Flagged Phrases</h3>
+                      <h3>Text Heatmap — Flagged Phrases</h3>
                       <div className="heatmap-list">
                         {heatmapData.map((entry, i) => {
                           const color = entry.risk_score >= 70 ? '#ef4444' : entry.risk_score >= 40 ? '#f59e0b' : '#eab308'
@@ -486,7 +486,7 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
                   {/* Bias Signals */}
                   {biasSignals && (
                     <div className="bias-panel" id="bias-panel">
-                      <h3>🧠 Bias &amp; Manipulation Signals</h3>
+                      <h3>Bias &amp; Manipulation Signals</h3>
                       <div className="bias-grid">
                         <div className="bias-card">
                           <span className="bias-label">Emotional Tone</span>
@@ -504,10 +504,10 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
                       {(biasSignals.manipulation_tactics.length > 0 || biasSignals.fear_signals.length > 0) && (
                         <div className="bias-tags">
                           {biasSignals.manipulation_tactics.map((t, i) => (
-                            <span key={`t-${i}`} className="bias-tag bias-tag-tactic">⚠️ {t}</span>
+                            <span key={`t-${i}`} className="bias-tag bias-tag-tactic">{t}</span>
                           ))}
                           {biasSignals.fear_signals.map((f, i) => (
-                            <span key={`f-${i}`} className="bias-tag bias-tag-fear">😰 {f}</span>
+                            <span key={`f-${i}`} className="bias-tag bias-tag-fear">{f}</span>
                           ))}
                         </div>
                       )}
@@ -517,7 +517,7 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
                   {/* Claims */}
                   {claims.length > 0 && (
                     <div className="claims-panel" id="claims-panel">
-                      <h3>📋 Claim-wise Analysis</h3>
+                      <h3>Claim-wise Analysis</h3>
                       <div className="claims-list" id="claims-list">
                         {claims.map((item, i) => (
                           <div key={i} className="claim-item">
@@ -538,12 +538,12 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
                   {/* Evidence */}
                   {evidence.length > 0 && (
                     <div className="evidence-panel" id="evidence-panel">
-                      <h3>🧾 Evidence Cards</h3>
+                      <h3>Evidence Cards</h3>
                       <div className="evidence-grid" id="evidence-grid">
                         {evidence.map((ev, i) => (
                           <div key={i} className="evidence-card">
                             <div className={`ev-type ${ev.stance === 'supporting' ? 'ev-support' : ev.stance === 'contradicting' ? 'ev-contra' : ''}`}>
-                              {ev.stance === 'supporting' ? '✅ Supporting' : ev.stance === 'contradicting' ? '❌ Contradicting' : '🔍 Neutral'}
+                              {ev.stance === 'supporting' ? 'Supporting' : ev.stance === 'contradicting' ? 'Contradicting' : 'Neutral'}
                             </div>
                             <div className="ev-source">
                               <a href={ev.url} target="_blank" rel="noopener noreferrer">{ev.title}</a>
@@ -564,7 +564,7 @@ export default function Scanner({ scannerRef, onAnalysisComplete, isEmbedded = f
 
                   {/* Explanation */}
                   <div className="explanation-panel" id="explanation-panel">
-                    <h3>💡 AI Explanation</h3>
+                    <h3>AI Explanation</h3>
                     <p id="explanation-text">{explanation}</p>
                   </div>
                 </>
